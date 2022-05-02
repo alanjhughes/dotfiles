@@ -1,0 +1,6 @@
+require("plugins.completion")
+require("plugins.lspconfig")
+require("plugins.keymaps")
+require("plugins.treesitter")
+require("plugins.null-ls")
+require("plugins.bufferline")

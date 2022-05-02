@@ -1,0 +1,26 @@
+{
+  "name": "alans-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescriptreact",
+        "path": "./js/typescriptreact.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./js/javascriptreact.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./js/javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./js/typescript.json"
+      }
+    ]
+  }
+}
