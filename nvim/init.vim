@@ -87,6 +87,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'           
 
+Plug 'lewis6991/gitsigns.nvim'
+
 call plug#end()
 
 let mapleader = ","
@@ -111,4 +113,3 @@ lua require("plugins")
 lua require("nvim-autopairs").setup()
 lua require("colorizer").setup()
 lua require("bufferline").setup{}
-
