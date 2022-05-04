@@ -4,14 +4,14 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = { "typescript", "javascript", "rust" }, 
-  sync_install = false, 
+  ensure_installed = { "typescript", "javascript", "rust" },
+  sync_install = false,
   ignore_install = { "" },
   autopairs = {
     enable = true,
   },
   highlight = {
-    enable = true, 
+    enable = true,
     disable = { "" },
     additional_vim_regex_highlighting = true,
   },

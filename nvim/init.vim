@@ -33,6 +33,7 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'akinsho/bufferline.nvim'
+Plug 'akinsho/toggleterm.nvim'
 
 Plug 'preservim/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -71,6 +72,8 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
+
+Plug 'tamago324/nlsp-settings.nvim'
 
 Plug 'onsails/lspkind-nvim'
 
