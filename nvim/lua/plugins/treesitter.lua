@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-configs.setup {
+configs.setup({
   ensure_installed = { "typescript", "javascript", "rust" },
   sync_install = false,
   ignore_install = { "" },
@@ -20,4 +20,4 @@ configs.setup {
     enable = true,
     enable_autocmd = false,
   },
-}
+})
