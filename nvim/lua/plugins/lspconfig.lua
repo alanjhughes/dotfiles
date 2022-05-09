@@ -8,29 +8,29 @@ local lspconfig = require("lspconfig")
 local handlers = require("lsp.handlers")
 handlers.setup()
 
-local servers = { 'rust_analyzer', 'tsserver', 'jsonls', 'eslint', 'sumneko_lua' }
+local servers = { "rust_analyzer", "tsserver", "jsonls", "eslint", "sumneko_lua", "clangd", "sourcekit" }
 lsp_installer.setup({
-  ensure_installed = servers,
-  automatic_installation = true,
-  ui = {
-    icons = {
-      server_installed = "✓",
-      server_pending = "➜",
-      server_uninstalled = "✗"
-    }
-  },
+	ensure_installed = servers,
+	automatic_installation = true,
+	ui = {
+		icons = {
+			server_installed = "✓",
+			server_pending = "➜",
+			server_uninstalled = "✗",
+		},
+	},
 })
 
 for _, server in pairs(servers) do
-  local opts = {
-    on_attach = handlers.on_attach,
-    capabilities = handlers.capabilities,
-  }
+	local opts = {
+		on_attach = handlers.on_attach,
+		capabilities = handlers.capabilities,
+	}
 
-  local has_custom_opts, server_custom_opts = pcall(require, "lsp." .. server)
-  if has_custom_opts then
-    opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
-  end
+	local has_custom_opts, server_custom_opts = pcall(require, "lsp." .. server)
+	if has_custom_opts then
+		opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
+	end
 
-  lspconfig[server].setup(opts)
+	lspconfig[server].setup(opts)
 end
