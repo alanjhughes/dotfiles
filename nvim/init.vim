@@ -23,7 +23,9 @@ call plug#begin()
 
 Plug 'rust-lang/rust.vim'
 Plug 'simrat39/rust-tools.nvim'
+
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-eunuch'
 
 Plug 'tpope/vim-commentary'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -91,7 +93,7 @@ Plug 'lewis6991/gitsigns.nvim'
 
 call plug#end()
 
-let mapleader = ","
+let mapleader = " "
 
 tnoremap <Esc> <C-\><C-n>
 
