@@ -7,25 +7,25 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
- on_attach = function(client, bufnr)
-      if client.supports_method("textDocument/formatting") then
-          vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-          vim.api.nvim_create_autocmd("BufWritePre", {
-              group = augroup,
-              buffer = bufnr,
-              -- on 0.8, you should use vim.lsp.buf.format instead
-              callback = vim.lsp.buf.formatting_sync,
-          })
-      end
-  end,
+	on_attach = function(client, bufnr)
+		if client.supports_method("textDocument/formatting") then
+			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				group = augroup,
+				buffer = bufnr,
+				-- on 0.8, you should use vim.lsp.buf.format instead
+				callback = vim.lsp.buf.formatting_sync,
+			})
+		end
+	end,
 	debug = false,
 	sources = {
 		formatting.prettierd.with({
-      env = {
-        PRETTIERD_DEFAULT_CONFIG = vim.fn.expand "~/.config/nvim/utils/linter-config/.prettierrc.json",
-      }
-    }),
+			env = {
+				PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/nvim/utils/linter-config/.prettierrc.json"),
+			},
+		}),
 		formatting.stylua,
-    diagnostics.eslint_d
+		diagnostics.eslint_d,
 	},
 })

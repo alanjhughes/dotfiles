@@ -7,6 +7,9 @@ configs.setup({
   ensure_installed = { "typescript", "javascript", "rust" },
   sync_install = false,
   ignore_install = { "" },
+  autotag = {
+    enable = true
+  },
   autopairs = {
     enable = true,
   },
