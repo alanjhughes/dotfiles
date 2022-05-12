@@ -23,3 +23,10 @@ keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
+
+-- trouble
+keymap("n", "<leader>xx", "<cmd>TroubleToggle<CR>", opts)
+keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<CR>", opts)
+keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<CR>", opts)
+keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<CR>", opts)
+keymap("n", "gR", "<cmd>TroubleToggle lsp_references<CR>", opts)

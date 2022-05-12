@@ -27,5 +27,6 @@ null_ls.setup({
 		}),
 		formatting.stylua,
 		diagnostics.eslint_d,
+		null_ls.builtins.code_actions.gitsigns,
 	},
 })

@@ -44,6 +44,7 @@ Plug 'neovim/nvim-lspconfig'
 
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
+Plug 'folke/trouble.nvim'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
