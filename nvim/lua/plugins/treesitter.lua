@@ -13,6 +13,10 @@ configs.setup({
 	autopairs = {
 		enable = true,
 	},
+	rainbow = {
+		enable = true,
+		max_file_lines = 1000,
+	},
 	highlight = {
 		enable = true,
 		disable = { "" },
