@@ -52,6 +52,7 @@ Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'mattn/emmet-vim'
 Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag'
 
 Plug 'pangloss/vim-javascript'  
 Plug 'leafgarland/typescript-vim'
