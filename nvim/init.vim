@@ -6,7 +6,7 @@ set tabstop=2 softtabstop=2
 set expandtab
 set smartindent
 set shiftwidth=2
-set ignorecase
+set ignorecase smartcase
 set updatetime=100
 set nu
 set guicursor=
@@ -16,7 +16,6 @@ set nowritebackup
 set noswapfile
 set termguicolors
 set mouse=a
-set smartcase
 set relativenumber
 
 call plug#begin()
