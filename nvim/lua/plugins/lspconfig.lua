@@ -8,7 +8,7 @@ local lspconfig = require("lspconfig")
 local handlers = require("lsp.handlers")
 handlers.setup()
 
-local servers = { "rust_analyzer", "tsserver", "jsonls", "eslint", "sumneko_lua", "clangd", "sourcekit" }
+local servers = { "rust_analyzer", "tsserver", "jsonls", "eslint", "sumneko_lua", "clangd", "sourcekit", "bashls" }
 lsp_installer.setup({
 	ensure_installed = servers,
 	automatic_installation = true,
