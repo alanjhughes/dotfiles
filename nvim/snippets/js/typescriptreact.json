@@ -1,0 +1,116 @@
+{
+  "Print to console": {
+    "prefix": "clog",
+    "body": ["console.log();"],
+    "description": "Log output to console"
+  },
+  "Create TypeScript React Native Screen": {
+    "prefix": "rnscr",
+    "body": [
+      "import { View, Text, StyleSheet } from 'react-native';",
+      "import { Screen } from '../../components/screen/screen';",
+      "",
+      "interface ${functionName}Props {\n}\n",
+      "export function $functionName({}: ${functionName}Props) {",
+      "  return (",
+      "    <Screen noSafeArea>",
+      "     <Text>${functionName}</Text>",
+      "    </Screen>",
+      "  );",
+      "};",
+      "",
+      "const styles = StyleSheet.create({",
+      "screen: {}",
+      "})"
+    ],
+    "description": "Create default react Component"
+  },
+
+  "Create TypeScript React Native Component": {
+    "prefix": "rncmp",
+    "body": [
+      "import { View, Text, StyleSheet } from 'react-native';",
+      "",
+      "interface ${functionName}Props {\n}\n",
+      "export function $functionName({}: ${functionName}Props) {",
+      "  return (",
+      "    <View>",
+      "     <Text>",
+      "       ${functionName}",
+      "     </Text>",
+      "    </View>",
+      "  );",
+      "};",
+      "",
+      "const styles = StyleSheet.create({",
+      "screen: {}",
+      "})"
+    ],
+    "description": "Create default react Component"
+  },
+
+  "Create Chakra React Component": {
+    "prefix": "cmp",
+    "body": [
+      "import { Stack, Text } from '@chakra-ui/react';",
+      "",
+      "interface ${functionName}Props {}",
+      "",
+      "function $functionName({}: ${functionName}Props) {",
+      "  return (",
+      "    <Stack>",
+      "      <Text>$functionName</Text>",
+      "    </Stack>",
+      "  );",
+      "};",
+      "",
+      "export default $functionName;"
+    ],
+    "description": "Create chakra default react Component"
+  },
+
+  "Create Remix React Route Component": {
+    "prefix": "rmxpg",
+    "body": [
+      "import { MetaFunction } from 'remix';",
+      "",
+      "export const meta: MetaFunction = () => {",
+      " return {",
+      "title: \"Title\",",
+      "description: \"Description\"",
+      " };",
+      "};",
+      "",
+      "interface ${functionName}Props {}",
+      "",
+      "export default function $functionName({}: ${functionName}Props) {",
+      "  return (",
+      "    <div>",
+      "      <h2>$functionName</h2>",
+      "    </div>",
+      "  );",
+      "};",
+      ""
+    ],
+    "description": "Create Remix Route Component"
+  },
+
+  "Create Remix React Component": {
+    "prefix": "rmxcmp",
+    "body": [
+      "import { } from 'remix';",
+      "",
+      "interface ${functionName}Props {}",
+      "",
+      "export function $functionName({}: ${functionName}Props) {",
+      "  return (",
+      "    <div>",
+      "      <h2>$functionName</h2>",
+      "    </div>",
+      "  );",
+      "};",
+      ""
+    ],
+    "description": "Create Remix Component"
+  }
+}

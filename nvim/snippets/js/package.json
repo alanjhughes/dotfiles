@@ -1,0 +1,24 @@
+{
+  "name": "alans-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./typescript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./typescriptreact.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./javascript.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./javascriptreact.json"
+      }
+    ]
+  }
+}
+
