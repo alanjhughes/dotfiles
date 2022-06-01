@@ -26,7 +26,7 @@ null_ls.setup({
 			},
 		}),
 		formatting.stylua,
-		diagnostics.eslint_d,
+		diagnostics.eslint,
 		null_ls.builtins.code_actions.gitsigns,
 	},
 })

@@ -15,7 +15,6 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 keymap("n", "<leader>e", ":NERDTreeToggle<CR>", opts)
-keymap("n", "<C-p>", ":Files<CR>", opts)
 keymap("i", "jk", "<ESC>", opts)
 keymap("n", "<leader>s", ":w<CR>", opts)
 
