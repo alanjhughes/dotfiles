@@ -87,9 +87,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'           
-
 Plug 'lewis6991/gitsigns.nvim'
 
 call plug#end()
@@ -100,10 +97,6 @@ tnoremap <Esc> <C-\><C-n>
 
 let g:rustfmt_autosave = 1
 let g:cursorhold_updatetime = 100
-
-let g:vsnip_filetypes = {}
-let g:vsnip_filetypes.javascriptreact = ['javascript']
-let g:vsnip_filetypes.typescriptreact = ['typescript']
 
 let g:airline_powerline_fonts = 1
 
