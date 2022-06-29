@@ -29,7 +29,6 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-commentary'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
-Plug 'tpope/vim-unimpaired'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 
 Plug 'editorconfig/editorconfig-vim'
@@ -73,8 +72,6 @@ Plug 'williamboman/nvim-lsp-installer'
 
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
 
 Plug 'tamago324/nlsp-settings.nvim'
 
@@ -109,3 +106,4 @@ lua require("plugins")
 lua require("nvim-autopairs").setup()
 lua require("colorizer").setup()
 lua require("bufferline").setup{}
+lua require("rust-tools").setup({})
