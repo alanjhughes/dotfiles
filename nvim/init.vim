@@ -25,6 +25,8 @@ Plug 'simrat39/rust-tools.nvim'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-sleuth'  
+Plug 'tpope/vim-rhubarb'      
 
 Plug 'tpope/vim-commentary'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -80,6 +82,7 @@ Plug 'onsails/lspkind-nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'  
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -103,7 +106,6 @@ filetype plugin indent on
 syntax enable 
 
 lua require("plugins")
-lua require("nvim-autopairs").setup()
 lua require("colorizer").setup()
 lua require("bufferline").setup{}
 lua require("rust-tools").setup({})
