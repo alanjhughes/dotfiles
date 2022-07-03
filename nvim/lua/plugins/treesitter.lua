@@ -4,7 +4,17 @@ if not status_ok then
 end
 
 configs.setup({
-	ensure_installed = { "typescript", "javascript", "rust", "json", "css", "html", "bash", "lua", "vim" },
+	ensure_installed = {
+		"typescript",
+		"javascript",
+		"rust",
+		"json",
+		"css",
+		"html",
+		"bash",
+		"lua",
+		"vim",
+	},
 	sync_install = false,
 	ignore_install = { "" },
 	autotag = {
