@@ -58,6 +58,8 @@ Plug 'windwp/nvim-ts-autotag'
 
 Plug 'pangloss/vim-javascript'  
 Plug 'leafgarland/typescript-vim'
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
 Plug 'github/copilot.vim'
