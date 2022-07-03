@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
-
 local keymap = vim.api.nvim_set_keymap
 
 -- window motion
@@ -29,3 +27,7 @@ keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<CR>", opts)
 keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<CR>", opts)
 keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<CR>", opts)
 keymap("n", "gR", "<cmd>TroubleToggle lsp_references<CR>", opts)
+
+-- Bufferline
+keymap("n", "[b", "<cmd>BufferLineCyclePrev<CR>", opts)
+keymap("n", "]b", "<cmd>BufferLineCycleNext<CR>", opts)
