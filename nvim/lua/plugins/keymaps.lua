@@ -31,3 +31,5 @@ keymap("n", "gR", "<cmd>TroubleToggle lsp_references<CR>", opts)
 -- Bufferline
 keymap("n", "[b", "<cmd>BufferLineCyclePrev<CR>", opts)
 keymap("n", "]b", "<cmd>BufferLineCycleNext<CR>", opts)
+
+keymap("n", "<C-w>", "<cmd>bd<CR>", opts)
