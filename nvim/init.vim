@@ -52,13 +52,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'mattn/emmet-vim'
+ 
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 
 Plug 'pangloss/vim-javascript'  
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'jparise/vim-graphql'
 
 Plug 'github/copilot.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
@@ -107,5 +107,4 @@ syntax enable
 
 lua require("plugins")
 lua require("colorizer").setup()
-lua require("bufferline").setup{}
 lua require("rust-tools").setup({})
