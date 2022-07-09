@@ -35,7 +35,7 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'akinsho/bufferline.nvim'
-Plug 'akinsho/toggleterm.nvim'
+Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
 
 Plug 'preservim/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
