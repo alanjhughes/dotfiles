@@ -37,9 +37,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
 
-" Plug 'preservim/nerdtree'
-Plug 'xuyuanp/nerdtree-git-plugin'
-
 Plug 'neovim/nvim-lspconfig'
 
 Plug 'kyazdani42/nvim-web-devicons'
@@ -53,7 +50,6 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'mattn/emmet-vim'
  
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'

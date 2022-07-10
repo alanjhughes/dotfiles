@@ -8,6 +8,32 @@ local lspconfig = require("lspconfig")
 local handlers = require("lsp.handlers")
 handlers.setup()
 
+local function setup_rust()
+	require("rust-tools").setup({
+		tools = {
+			autoSetHints = true,
+			hover_with_actions = true,
+			inlay_hints = {
+				show_parameter_hints = false,
+				parameter_hints_prefix = "",
+				other_hints_prefix = "",
+			},
+		},
+
+		server = {
+			on_attach = handlers.on_attach,
+			capabilities = handlers.capabilities,
+			settings = {
+				["rust-analyzer"] = {
+					checkOnSave = {
+						command = "clippy",
+					},
+				},
+			},
+		},
+	})
+end
+
 local servers = { "rust_analyzer", "tsserver", "jsonls", "eslint", "sumneko_lua", "clangd", "sourcekit", "bashls" }
 lsp_installer.setup({
 	ensure_installed = servers,
@@ -30,6 +56,11 @@ for _, server in pairs(servers) do
 	local has_custom_opts, server_custom_opts = pcall(require, "lsp." .. server)
 	if has_custom_opts then
 		opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
+	end
+
+	if server == "rust_analyzer" then
+		setup_rust()
+		return
 	end
 
 	lspconfig[server].setup(opts)
