@@ -60,8 +60,9 @@ for _, server in pairs(servers) do
 
 	if server == "rust_analyzer" then
 		setup_rust()
-		return
+		goto continue
 	end
 
 	lspconfig[server].setup(opts)
+	::continue::
 end
