@@ -37,12 +37,14 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
 
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 
 Plug 'neovim/nvim-lspconfig'
 
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+
 Plug 'ryanoasis/vim-devicons'
 Plug 'folke/trouble.nvim'
 

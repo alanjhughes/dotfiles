@@ -12,7 +12,7 @@ keymap("n", "<C-q>", "<C-w>o", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
-keymap("n", "<leader>e", ":NERDTreeToggle<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("i", "jk", "<ESC>", opts)
 keymap("n", "<leader>s", ":w<CR>", opts)
 
