@@ -1,62 +1,59 @@
 {
-	"Print to console": {
-		"prefix": "clog",
-		"body": [
-			"console.log();"
-		],
-		"description": "Log output to console"
-	},
-	"Create Chakra React Component": {
+  "Print to console": {
+    "prefix": "clog",
+    "body": ["console.log();"],
+    "description": "Log output to console"
+  },
+  "Create Chakra React Component": {
     "prefix": "comp",
     "body": [
-			"import { Stack, Text } from '@chakra-ui/react';" ,
-			"import PropTypes from 'prop-types';",
-			"",
-			"function $functionName($props) {",
-			"  return (",
-			"    <Stack>",
-			"      <Text>$functionName</Text>",
-			"    </Stack>",
-			"  );",
-			"};",
-			"",
+      "import { Stack, Text } from '@chakra-ui/react';",
+      "import PropTypes from 'prop-types';",
+      "",
+      "function $functionName($props) {",
+      "  return (",
+      "    <Stack>",
+      "      <Text>$functionName</Text>",
+      "    </Stack>",
+      "  );",
+      "};",
+      "",
       "export default $functionName;"
     ],
     "description": "Create default react Component"
   },
 
-	"Standard React Component": {
+  "Standard React Component": {
     "prefix": "cmp",
     "body": [
-			"import React from 'react';" ,
-			"import PropTypes from 'prop-types';",
-			"",
-			"function $functionName($props) {",
-			"  return (",
-			"    <div>",
-			"      <h1>$functionName</h1>",
-			"    </div>",
-			"  );",
-			"};",
-			"",
+      "import React from 'react';",
+      "import PropTypes from 'prop-types';",
+      "",
+      "function $functionName($props) {",
+      "  return (",
+      "    <div>",
+      "      <h1>$functionName</h1>",
+      "    </div>",
+      "  );",
+      "};",
+      "",
       "export default $functionName;"
     ],
     "description": "Create standard  react Component"
   },
 
-	"React Native Component": {
-		"prefix": "rnat",
-		"body": [
-			"import React from 'react'",
-			"import {View, Text, StyleSheet} from 'react-native'",
-			"",
-			"function $functionName({$props}) {",
-			"}",
-			"",
-			"const styles = StyleSheet.create({})",
-			"export default $functionName"
-		],
-		"description": "Basic React Native component template"
-	},
-
+  "React Native Component": {
+    "prefix": "rnat",
+    "body": [
+      "import React from 'react'",
+      "import {View, Text, StyleSheet} from 'react-native'",
+      "",
+      "function $functionName({$props}) {",
+      "}",
+      "",
+      "const styles = StyleSheet.create({})",
+      "export default $functionName"
+    ],
+    "description": "Basic React Native component template"
+  }
 }
