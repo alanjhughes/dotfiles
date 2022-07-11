@@ -35,3 +35,8 @@ keymap("n", "cb", "<cmd>BufferLinePickClose<CR>", opts)
 keymap("n", "gb", "<cmd>BufferLinePick<CR>", opts)
 
 keymap("n", "<C-w>", "<cmd>bd<CR>", opts)
+
+-- Rust
+keymap("n", "<leader>rt", "<cmd>RustToggleInlayHints<CR>", opts)
+keymap("n", "<leader>rs", "<cmd>RustSetInlayHints<CR>", opts)
+keymap("n", "<leader>rf", "<cmd>RustFmt<CR>", opts)
