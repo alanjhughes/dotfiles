@@ -96,8 +96,7 @@ let mapleader = " "
 tnoremap <Esc> <C-\><C-n>
 
 let g:cursorhold_updatetime = 100
-let g:LanguageClient_serverCommands = {'rust': ['rust-analyzer']}
-
+let g:rustfmt_autosave = 1
 let g:airline_powerline_fonts = 1
 
 set background=dark
