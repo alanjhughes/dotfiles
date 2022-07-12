@@ -33,7 +33,6 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 Plug 'jose-elias-alvarez/null-ls.nvim'
 
-Plug 'editorconfig/editorconfig-vim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
 
