@@ -4,6 +4,7 @@
     "body": ["console.log();"],
     "description": "Log output to console"
   },
+
   "Create TypeScript React Native Screen": {
     "prefix": "rnscr",
     "body": [

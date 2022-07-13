@@ -74,8 +74,6 @@ Plug 'williamboman/nvim-lsp-installer'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
-Plug 'tamago324/nlsp-settings.nvim'
-
 Plug 'onsails/lspkind-nvim'
 
 Plug 'norcalli/nvim-colorizer.lua'
