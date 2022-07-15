@@ -43,11 +43,6 @@ local kind_icons = {
 }
 
 cmp.setup({
-	snippet = {
-		expand = function(args)
-			luasnip.lsp_expand(args.body)
-		end,
-	},
 	mapping = {
 		["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
 		["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -113,5 +108,14 @@ cmp.setup({
 	experimental = {
 		native_menu = false,
 		ghost_text = true,
+	},
+	snippet = {
+		expand = function(args)
+			local luasnip = prequire("luasnip")
+			if not luasnip then
+				return
+			end
+			luasnip.lsp_expand(args.body)
+		end,
 	},
 })
