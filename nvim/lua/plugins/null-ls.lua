@@ -21,8 +21,16 @@ null_ls.setup({
 	end,
 	debug = false,
 	sources = {
-		formatting.prettier.with({
-			prefer_local = "node_modules/.bin",
+		-- formatting.prettier.with({
+		-- 	prefer_local = "node_modules/.bin",
+		-- }),
+		formatting.prettierd.with({
+			env = {
+				string.format(
+					"PRETTIERD_DEFAULT_CONFIG=%s",
+					vim.fn.expand("~/.config/nvim/utils/linter-config/.prettierrc.json")
+				),
+			},
 		}),
 		formatting.stylua,
 		diagnostics.eslint_d,
