@@ -11,11 +11,15 @@ keymap("n", "<C-q>", "<C-w>o", opts)
 
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
-
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("i", "jk", "<ESC>", opts)
 keymap("n", "<leader>s", "<cmd>w<CR>", opts)
+keymap("n", "<C-w>", "<cmd>bd<CR>", opts)
 
+-- nvim-tree
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>tf", ":NvimTreeFindFile<CR>", opts)
+
+-- telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
@@ -35,8 +39,6 @@ keymap("n", "cb", "<cmd>BufferLinePickClose<CR>", opts)
 keymap("n", "gb", "<cmd>BufferLinePick<CR>", opts)
 keymap("n", "cl", "<cmd>BufferLineCloseLeft<CR>", opts)
 keymap("n", "cr", "<cmd>BufferLineCloseRight<CR>", opts)
-
-keymap("n", "<C-w>", "<cmd>bd<CR>", opts)
 
 -- Rust
 keymap("n", "<leader>rt", "<cmd>RustToggleInlayHints<CR>", opts)
