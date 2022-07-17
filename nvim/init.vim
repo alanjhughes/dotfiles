@@ -43,6 +43,9 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'ryanoasis/vim-devicons'
 Plug 'folke/trouble.nvim'
+Plug 'folke/which-key.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'b0o/schemastore.nvim'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'

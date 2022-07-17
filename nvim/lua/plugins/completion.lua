@@ -3,6 +3,11 @@ if not cmp_status_ok then
 	return
 end
 
+local cmp_autopairs_status, cmp_autopairs = pcall(require, "nvim-autopairs.completion.cmp")
+if not cmp_autopairs_status then
+	return
+end
+
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
 	return
@@ -16,6 +21,8 @@ local check_backspace = function()
 end
 
 vim.o.completeopt = "menu,menuone,noselect"
+
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
 local kind_icons = {
 	Text = "",

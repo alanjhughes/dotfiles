@@ -21,13 +21,12 @@ null_ls.setup({
 	end,
 	debug = false,
 	sources = {
-		formatting.prettierd.with({
-			env = {
-				PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/nvim/utils/linter-config/.prettierrc.json"),
-			},
+		formatting.prettier.with({
+			prefer_local = "node_modules/.bin",
 		}),
 		formatting.stylua,
-		diagnostics.eslint,
+		diagnostics.eslint_d,
 		code_actions.gitsigns,
+		code_actions.eslint_d,
 	},
 })
