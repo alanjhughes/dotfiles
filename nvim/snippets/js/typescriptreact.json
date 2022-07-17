@@ -103,7 +103,7 @@
       "",
       "interface ${1}Props {}",
       "",
-      "export function $1({}: ${functionName}Props) {",
+      "export function $1({}: ${1}Props) {",
       "  return (",
       "    <div>",
       "      <h2>$1</h2>",
