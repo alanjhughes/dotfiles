@@ -13,17 +13,10 @@ local icons = require("plugins.user.icons")
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
-	hijack_directories = {
-		enable = false,
-	},
 	ignore_ft_on_setup = {
 		"startify",
 		"dashboard",
 		"alpha",
-	},
-	filters = {
-		custom = { ".git" },
-		exclude = { ".gitignore" },
 	},
 	update_cwd = true,
 	renderer = {
