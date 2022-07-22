@@ -24,7 +24,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'simrat39/rust-tools.nvim'
 
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sleuth'  
 Plug 'tpope/vim-rhubarb'      
 
@@ -32,6 +31,9 @@ Plug 'tpope/vim-commentary'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'rcarriga/nvim-notify'
+Plug 'stevearc/dressing.nvim' 
+Plug 'Saecki/crates.nvim'
 
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
@@ -56,9 +58,8 @@ Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 
-Plug 'pangloss/vim-javascript'  
-Plug 'leafgarland/typescript-vim'
-Plug 'yuezk/vim-js'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
@@ -69,18 +70,17 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
-Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'hrsh7th/nvim-cmp'
 
-Plug 'williamboman/nvim-lsp-installer'
-
+Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
+Plug 'williamboman/nvim-lsp-installer'
+
 Plug 'onsails/lspkind-nvim'
-
 Plug 'norcalli/nvim-colorizer.lua'
-
+ 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'  
 

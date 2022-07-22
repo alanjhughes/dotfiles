@@ -31,11 +31,9 @@ configs.setup({
 	},
 	rainbow = {
 		enable = true,
-		max_file_lines = 1000,
 	},
 	highlight = {
 		enable = true,
-		disable = { "" },
 		additional_vim_regex_highlighting = true,
 	},
 	indent = { enable = true, disable = { "yaml" } },
