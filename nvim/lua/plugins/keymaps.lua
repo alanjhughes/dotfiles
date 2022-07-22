@@ -13,7 +13,7 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 keymap("i", "jk", "<ESC>", opts)
 keymap("n", "<leader>s", "<cmd>w<CR>", opts)
-keymap("n", "<C-w>", "<cmd>bd<CR>", opts)
+keymap("n", "<C-d>", "<cmd>bd<CR>", opts)
 
 -- nvim-tree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)

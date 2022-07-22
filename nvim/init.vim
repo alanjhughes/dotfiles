@@ -27,8 +27,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sleuth'  
 Plug 'tpope/vim-rhubarb'      
 
-Plug 'tpope/vim-commentary'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'tpope/vim-commentary'
 
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'rcarriga/nvim-notify'
@@ -58,8 +58,6 @@ Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 
-" Plug 'leafgarland/typescript-vim'
-" Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
