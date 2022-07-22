@@ -34,7 +34,7 @@ local function setup_rust()
 	})
 end
 
-local servers = { "rust_analyzer", "tsserver", "jsonls", "eslint", "sumneko_lua", "clangd", "sourcekit", "bashls" }
+local servers = { "rust_analyzer", "tsserver", "jsonls", "jedi_language_server", "html", "remark_ls", "eslint", "sumneko_lua", "clangd", "sourcekit", "bashls" }
 lsp_installer.setup({
 	ensure_installed = servers,
 	automatic_installation = true,
