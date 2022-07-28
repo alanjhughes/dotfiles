@@ -22,8 +22,6 @@ end
 
 vim.o.completeopt = "menu,menuone,noselect"
 
-cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
-
 local kind_icons = {
 	Text = "",
 	Method = "m",
