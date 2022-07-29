@@ -34,6 +34,17 @@ local function setup_rust()
 	})
 end
 
+local function setup_ts()
+	require("typescript").setup({
+		disable_commands = false,
+		debug = false,
+		server = {
+			on_attach = handlers.on_attach,
+			capabilities = handlers.capabilities
+		}
+	})
+end
+
 local servers = { "rust_analyzer", "tsserver", "jsonls", "pyright", "html", "remark_ls", "eslint", "sumneko_lua", "clangd", "sourcekit", "bashls" }
 
 lsp_installer.setup({
@@ -61,6 +72,11 @@ for _, server in pairs(servers) do
 
 	if server == "rust_analyzer" then
 		setup_rust()
+		goto continue
+	end
+
+	if server == 'tsserver' then
+		setup_ts()
 		goto continue
 	end
 

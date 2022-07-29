@@ -58,8 +58,10 @@ Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 
+Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'jose-elias-alvarez/typescript.nvim'
 
 Plug 'github/copilot.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
