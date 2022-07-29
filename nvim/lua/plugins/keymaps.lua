@@ -45,3 +45,8 @@ keymap("n", "<leader>rt", "<cmd>RustToggleInlayHints<CR>", opts)
 keymap("n", "<leader>rs", "<cmd>RustSetInlayHints<CR>", opts)
 keymap("n", "<leader>rf", "<cmd>RustFmt<CR>", opts)
 keymap("n", "<leader>rr", "<cmd>RustRun<CR>", opts)
+
+-- Typescript
+keymap("n", "<leader>oi", "<cmd>TypescriptOrganizeImports<CR>", opts)
+keymap("n", "<leader>ai", "<cmd>TypescriptAddMissingImports<CR>", opts)
+keymap("n", "<leader>ru", "<cmd>TypescriptRemoveUnused<CR>", opts)
