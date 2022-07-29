@@ -24,6 +24,9 @@ keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
+keymap("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", opts)
+keymap("n", "<leader>ft", "<cmd>Telescope help_tags<CR>", opts)
+keymap("n", "<leader>fr", "<cmd>Telescope registers<CR>", opts)
 
 -- trouble
 keymap("n", "<leader>xx", "<cmd>TroubleToggle<CR>", opts)
@@ -45,6 +48,8 @@ keymap("n", "<leader>rt", "<cmd>RustToggleInlayHints<CR>", opts)
 keymap("n", "<leader>rs", "<cmd>RustSetInlayHints<CR>", opts)
 keymap("n", "<leader>rf", "<cmd>RustFmt<CR>", opts)
 keymap("n", "<leader>rr", "<cmd>RustRun<CR>", opts)
+keymap("n", "<leader>re", "<cmd>RustExpandMacro<CR>", opts)
+keymap("n", "<leader>rb", "<cmd>Cbuild<CR>", opts)
 
 -- Typescript
 keymap("n", "<leader>oi", "<cmd>TypescriptOrganizeImports<CR>", opts)

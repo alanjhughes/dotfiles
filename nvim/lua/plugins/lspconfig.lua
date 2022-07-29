@@ -8,44 +8,7 @@ local lspconfig = require("lspconfig")
 local handlers = require("lsp.handlers")
 handlers.setup()
 
-local function setup_rust()
-	require("rust-tools").setup({
-		tools = {
-			autoSetHints = true,
-			hover_with_actions = true,
-			inlay_hints = {
-				show_parameter_hints = false,
-				parameter_hints_prefix = "",
-				other_hints_prefix = "",
-			},
-		},
-
-		server = {
-			on_attach = handlers.on_attach,
-			capabilities = handlers.capabilities,
-			settings = {
-				["rust-analyzer"] = {
-					checkOnSave = {
-						command = "clippy",
-					},
-				},
-			},
-		},
-	})
-end
-
-local function setup_ts()
-	require("typescript").setup({
-		disable_commands = false,
-		debug = false,
-		server = {
-			on_attach = handlers.on_attach,
-			capabilities = handlers.capabilities
-		}
-	})
-end
-
-local servers = { "rust_analyzer", "tsserver", "jsonls", "pyright", "html", "remark_ls", "eslint", "sumneko_lua", "clangd", "sourcekit", "bashls" }
+local servers = { "rust_analyzer", "tsserver", "jsonls", "html", "sumneko_lua", "clangd", "bashls" }
 
 lsp_installer.setup({
 	ensure_installed = servers,
@@ -71,12 +34,12 @@ for _, server in pairs(servers) do
 	end
 
 	if server == "rust_analyzer" then
-		setup_rust()
+		require("plugins.user.rust").setup(handlers)
 		goto continue
 	end
 
 	if server == 'tsserver' then
-		setup_ts()
+		require("plugins.user.ts").setup(handlers)
 		goto continue
 	end
 

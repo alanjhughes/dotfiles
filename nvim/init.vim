@@ -24,7 +24,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'simrat39/rust-tools.nvim'
 
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-sleuth'  
 Plug 'tpope/vim-rhubarb'      
 
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'

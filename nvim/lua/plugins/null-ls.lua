@@ -7,6 +7,8 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local code_actions = null_ls.builtins.code_actions
 
+local augroup = vim.api.nvim_create_augroup("null_ls", { clear = true })
+
 null_ls.setup({
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
@@ -21,9 +23,6 @@ null_ls.setup({
 	end,
 	debug = false,
 	sources = {
-		-- formatting.prettier.with({
-		-- 	prefer_local = "node_modules/.bin",
-		-- }),
 		formatting.prettierd.with({
 			env = {
 				string.format(
