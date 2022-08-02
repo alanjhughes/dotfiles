@@ -25,9 +25,10 @@ Plug 'simrat39/rust-tools.nvim'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'      
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-Plug 'tpope/vim-commentary'
 
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'rcarriga/nvim-notify'
