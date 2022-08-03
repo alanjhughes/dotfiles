@@ -55,6 +55,7 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'p00f/nvim-ts-rainbow'
 Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'morhetz/gruvbox'
 Plug 'akinsho/bufferline.nvim'
  
 Plug 'windwp/nvim-autopairs'
@@ -62,9 +63,10 @@ Plug 'windwp/nvim-ts-autotag'
 
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'maxmellon/vim-jsx-pretty'
+Plug 'maxmellon/vim-jsx-pretty' 
 Plug 'jose-elias-alvarez/typescript.nvim'
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 Plug 'github/copilot.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
@@ -112,7 +114,9 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-colorscheme nightfly 
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
+colorscheme gruvbox 
 filetype plugin indent on
 syntax enable 
 
