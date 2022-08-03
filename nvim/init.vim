@@ -65,7 +65,6 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty' 
 Plug 'jose-elias-alvarez/typescript.nvim'
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 
 Plug 'github/copilot.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
@@ -111,8 +110,6 @@ endif
 if (has("termguicolors")) 
   set termguicolors
 endif
-
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 colorscheme nightfly 
 filetype plugin indent on
