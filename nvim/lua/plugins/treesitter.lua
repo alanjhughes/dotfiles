@@ -18,21 +18,19 @@ configs.setup({
 		"prisma",
 		"cpp",
 	},
-	sync_install = false,
-	ignore_install = { "" },
 	autotag = {
 		enable = true,
 	},
 	rainbow = {
 		enable = true,
+		extended_mode = true,
 	},
 	highlight = {
 		enable = true,
-		additional_vim_regex_highlighting = true,
+		use_languagetree = true,
 	},
-	indent = { enable = true, disable = { "yaml" } },
+	indent = { enable = true },
 	context_commentstring = {
 		enable = true,
-		enable_autocmd = false,
 	},
 })

@@ -3,4 +3,6 @@ if not snip_status_ok then
 	return
 end
 
-telescope.setup()
+telescope.setup({ defaults = {
+	file_ignore_patterns = { "node_modules" },
+} })

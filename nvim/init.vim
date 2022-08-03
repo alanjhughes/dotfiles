@@ -25,6 +25,7 @@ Plug 'simrat39/rust-tools.nvim'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'      
+Plug 'tpope/vim-sleuth'      
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
@@ -35,7 +36,6 @@ Plug 'rcarriga/nvim-notify'
 Plug 'stevearc/dressing.nvim' 
 Plug 'Saecki/crates.nvim'
 
-Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
 
 Plug 'neovim/nvim-lspconfig'
@@ -52,8 +52,9 @@ Plug 'b0o/schemastore.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 
-Plug 'nvim-lua/lsp_extensions.nvim'
+Plug 'p00f/nvim-ts-rainbow'
 Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'akinsho/bufferline.nvim'
  
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
@@ -62,10 +63,12 @@ Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jose-elias-alvarez/typescript.nvim'
+Plug 'leafgarland/typescript-vim'
 
 Plug 'github/copilot.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 
+Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-buffer'
@@ -98,6 +101,7 @@ tnoremap <Esc> <C-\><C-n>
 let g:cursorhold_updatetime = 100
 let g:rustfmt_autosave = 1
 let g:airline_powerline_fonts = 1
+let g:vim_jsx_pretty_highlight_close_tag = 1
 
 set background=dark
 colorscheme nightfly 
