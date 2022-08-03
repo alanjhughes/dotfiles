@@ -55,7 +55,6 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'p00f/nvim-ts-rainbow'
 Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'morhetz/gruvbox'
 Plug 'akinsho/bufferline.nvim'
  
 Plug 'windwp/nvim-autopairs'
@@ -106,7 +105,6 @@ let g:airline_powerline_fonts = 1
 let g:vim_jsx_pretty_highlight_close_tag = 1
 
 if (has('nvim'))
-
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 
@@ -116,7 +114,7 @@ endif
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
-colorscheme gruvbox 
+colorscheme nightfly 
 filetype plugin indent on
 syntax enable 
 
