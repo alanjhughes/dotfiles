@@ -14,11 +14,12 @@ set nohlsearch
 set nobackup
 set nowritebackup
 set noswapfile
-set termguicolors
 set mouse=a
 set relativenumber
 
 call plug#begin()
+
+Plug 'nvim-lua/plenary.nvim'
 
 Plug 'rust-lang/rust.vim'
 Plug 'simrat39/rust-tools.nvim'
@@ -36,7 +37,7 @@ Plug 'rcarriga/nvim-notify'
 Plug 'stevearc/dressing.nvim' 
 Plug 'Saecki/crates.nvim'
 
-Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
+Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 
 Plug 'neovim/nvim-lspconfig'
 
@@ -87,7 +88,6 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'  
 
-Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'lewis6991/gitsigns.nvim'
@@ -103,10 +103,17 @@ let g:rustfmt_autosave = 1
 let g:airline_powerline_fonts = 1
 let g:vim_jsx_pretty_highlight_close_tag = 1
 
-set background=dark
+if (has('nvim'))
+
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+if (has("termguicolors")) 
+  set termguicolors
+endif
+
 colorscheme nightfly 
 filetype plugin indent on
 syntax enable 
 
 lua require("plugins")
-lua require("colorizer").setup()
