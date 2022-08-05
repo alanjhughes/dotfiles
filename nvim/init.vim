@@ -84,6 +84,7 @@ Plug 'rafamadriz/friendly-snippets'
 
 Plug 'williamboman/nvim-lsp-installer'
 
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'onsails/lspkind-nvim'
 Plug 'norcalli/nvim-colorizer.lua'
  
