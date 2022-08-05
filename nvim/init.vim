@@ -16,6 +16,7 @@ set nowritebackup
 set noswapfile
 set mouse=a
 set relativenumber
+set title
 
 call plug#begin()
 

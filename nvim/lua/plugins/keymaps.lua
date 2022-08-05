@@ -27,6 +27,7 @@ keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 keymap("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>ft", "<cmd>Telescope help_tags<CR>", opts)
 keymap("n", "<leader>fr", "<cmd>Telescope registers<CR>", opts)
+keymap("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>", opts)
 
 -- trouble
 keymap("n", "<leader>xx", "<cmd>TroubleToggle<CR>", opts)
