@@ -12,6 +12,7 @@ set nu
 set guicursor=
 set nohlsearch
 set nobackup
+set termguicolors
 set nowritebackup
 set noswapfile
 set mouse=a
@@ -105,14 +106,6 @@ let g:cursorhold_updatetime = 100
 let g:rustfmt_autosave = 1
 let g:airline_powerline_fonts = 1
 let g:vim_jsx_pretty_highlight_close_tag = 1
-
-if (has('nvim'))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
-
-if (has("termguicolors")) 
-  set termguicolors
-endif
 
 colorscheme nightfly 
 filetype plugin indent on
