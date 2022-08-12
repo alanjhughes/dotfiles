@@ -85,6 +85,7 @@ Plug 'rafamadriz/friendly-snippets'
 
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'glepnir/lspsaga.nvim' 
 
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'onsails/lspkind-nvim'
