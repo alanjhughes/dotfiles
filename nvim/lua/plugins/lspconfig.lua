@@ -1,5 +1,6 @@
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
+local status_ok, masonConfig = pcall(require, "mason-lspconfig")
 if not status_ok then
+	
 	return
 end
 
@@ -8,18 +9,19 @@ local lspconfig = require("lspconfig")
 local handlers = require("lsp.handlers")
 handlers.setup()
 
-local servers = { "rust_analyzer", "tsserver", "jsonls", "html", "sumneko_lua", "clangd", "bashls" }
+local servers = {
+	"rust_analyzer",
+	"typescript-language-server",
+	"jsonls",
+	"html",
+	"sumneko_lua",
+	"clangd",
+	"bashls",
+}
 
-lsp_installer.setup({
+masonConfig.setup({
 	ensure_installed = servers,
 	automatic_installation = true,
-	ui = {
-		icons = {
-			server_installed = "✓",
-			server_pending = "➜",
-			server_uninstalled = "✗",
-		},
-	},
 })
 
 for _, server in pairs(servers) do
@@ -38,7 +40,7 @@ for _, server in pairs(servers) do
 		goto continue
 	end
 
-	if server == 'tsserver' then
+	if server == "typescript-language-server" then
 		require("plugins.user.ts").setup(handlers)
 		goto continue
 	end

@@ -25,6 +25,7 @@ Plug 'nvim-lua/plenary.nvim'
 
 Plug 'rust-lang/rust.vim'
 Plug 'simrat39/rust-tools.nvim'
+Plug 'Saecki/crates.nvim'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'      
@@ -37,7 +38,6 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'rcarriga/nvim-notify'
 Plug 'stevearc/dressing.nvim' 
-Plug 'Saecki/crates.nvim'
 
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 
@@ -83,7 +83,8 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
-Plug 'williamboman/nvim-lsp-installer'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'onsails/lspkind-nvim'
