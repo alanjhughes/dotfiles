@@ -113,3 +113,4 @@ filetype plugin indent on
 lua vim.opt.titlestring = [[%f %h%m%r%w %{v:progname}]]
 
 lua require("plugins")
+lua require("settings")
