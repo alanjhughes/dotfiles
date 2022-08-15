@@ -15,7 +15,6 @@ local servers = {
 	"jsonls",
 	"html",
 	"sumneko_lua",
-	"clangd",
 	"bashls",
 }
 
