@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-local icons = require("plugins.user.icons")
+local icons = require("user.icons")
 
 notify.setup({
 	stages = "fade_in_slide_out",

@@ -1,17 +1,19 @@
 local status_ok, masonConfig = pcall(require, "mason-lspconfig")
 if not status_ok then
-	
 	return
 end
 
-local lspconfig = require("lspconfig")
+local lsp_status_ok, lspconfig = pcall(require, "lspconfig")
+if not lsp_status_ok then
+	return
+end
 
-local handlers = require("lsp.handlers")
+local handlers = require "lsp.handlers"
 handlers.setup()
 
 local servers = {
 	"rust_analyzer",
-	"typescript-language-server",
+	"tsserver",
 	"jsonls",
 	"html",
 	"sumneko_lua",
@@ -35,12 +37,12 @@ for _, server in pairs(servers) do
 	end
 
 	if server == "rust_analyzer" then
-		require("plugins.user.rust").setup(handlers)
+		require "user.rust".setup(handlers)
 		goto continue
 	end
 
-	if server == "typescript-language-server" then
-		require("plugins.user.ts").setup(handlers)
+	if server == "tsserver" then
+		require "user.ts".setup(handlers)
 		goto continue
 	end
 
