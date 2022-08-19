@@ -66,10 +66,8 @@ Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty' 
 Plug 'jose-elias-alvarez/typescript.nvim'
-Plug 'leafgarland/typescript-vim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 
-Plug 'github/copilot.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 
 Plug 'nvim-lua/lsp_extensions.nvim'
