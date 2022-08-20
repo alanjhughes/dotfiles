@@ -17,7 +17,6 @@ local servers = {
 	"jsonls",
 	"html",
 	"sumneko_lua",
-	"bashls",
 }
 
 masonConfig.setup({

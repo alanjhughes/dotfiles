@@ -88,6 +88,11 @@ nvim_tree.setup({
 		ignore = true,
 		timeout = 500,
 	},
+	actions = {
+		change_dir = {
+			restrict_above_cwd = true,
+		},
+	},
 	view = {
 		width = 30,
 		height = 30,
