@@ -25,6 +25,7 @@ packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use("nvim-lua/plenary.nvim")
+	use("mfussenegger/nvim-dap")
 
 	use("rust-lang/rust.vim")
 	use("simrat39/rust-tools.nvim")
