@@ -109,4 +109,7 @@ nvim_tree.setup({
 		number = false,
 		relativenumber = false,
 	},
+	hijack_directories = {
+		auto_open = false,
+	},
 })
