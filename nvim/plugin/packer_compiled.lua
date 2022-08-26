@@ -304,10 +304,15 @@ _G.packer_plugins = {
     path = "/Users/alanjhughes/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
   },
+  ["vim-js"] = {
+    loaded = true,
+    path = "/Users/alanjhughes/.local/share/nvim/site/pack/packer/start/vim-js",
+    url = "https://github.com/yuezk/vim-js"
+  },
   ["vim-jsx-pretty"] = {
     loaded = true,
     path = "/Users/alanjhughes/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
-    url = "https://github.com/maxmellon/vim-jsx-pretty"
+    url = "https://github.com/maxMEllon/vim-jsx-pretty"
   },
   ["vim-nightfly-guicolors"] = {
     loaded = true,
