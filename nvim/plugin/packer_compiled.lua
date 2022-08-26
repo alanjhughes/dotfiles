@@ -304,6 +304,11 @@ _G.packer_plugins = {
     path = "/Users/alanjhughes/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
   },
+  ["vim-jsx-pretty"] = {
+    loaded = true,
+    path = "/Users/alanjhughes/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
+    url = "https://github.com/maxmellon/vim-jsx-pretty"
+  },
   ["vim-nightfly-guicolors"] = {
     loaded = true,
     path = "/Users/alanjhughes/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
@@ -333,6 +338,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/alanjhughes/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
+  },
+  ["yats.vim"] = {
+    loaded = true,
+    path = "/Users/alanjhughes/.local/share/nvim/site/pack/packer/start/yats.vim",
+    url = "https://github.com/HerringtonDarkholme/yats.vim"
   }
 }
 

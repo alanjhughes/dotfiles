@@ -54,6 +54,9 @@ packer.startup(function(use)
 	use("nvim-lua/popup.nvim")
 	use("b0o/schemastore.nvim")
 
+	use("HerringtonDarkholme/yats.vim")
+	use("maxmellon/vim-jsx-pretty")
+
 	use("airblade/vim-gitgutter")
 	use("vim-airline/vim-airline")
 
