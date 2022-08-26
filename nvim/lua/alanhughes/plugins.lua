@@ -64,9 +64,6 @@ packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 
-	use("yuezk/vim-js")
-	use("HerringtonDarkholme/yats.vim")
-	use("maxmellon/vim-jsx-pretty")
 	use("jose-elias-alvarez/typescript.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 
@@ -93,7 +90,9 @@ packer.startup(function(use)
 	use("glepnir/lspsaga.nvim")
 
 	use({ "mg979/vim-visual-multi", branch = "master" })
+
 	use("onsails/lspkind-nvim")
+
 	use("norcalli/nvim-colorizer.lua")
 	use({
 		"nvim-treesitter/nvim-treesitter",

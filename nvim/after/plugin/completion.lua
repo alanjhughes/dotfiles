@@ -46,6 +46,7 @@ local kind_icons = {
 }
 
 cmp.setup({
+	check_ts = true,
 	mapping = {
 		["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
 		["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
