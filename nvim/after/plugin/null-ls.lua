@@ -34,8 +34,8 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.shfmt,
 		diagnostics.eslint_d,
-		code_actions.gitsigns,
 		code_actions.eslint_d,
 		code_actions.gitsigns,
 	},
+	debounce = 100
 })
