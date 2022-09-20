@@ -37,5 +37,5 @@ null_ls.setup({
 		code_actions.eslint_d,
 		code_actions.gitsigns,
 	},
-	debounce = 100
+	debounce = 100,
 })
