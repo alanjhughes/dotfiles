@@ -43,8 +43,6 @@ packer.startup(function(use)
 	use("rcarriga/nvim-notify")
 	use("stevearc/dressing.nvim")
 
-	use({ "akinsho/toggleterm.nvim", tag = "v2.*" })
-
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
 
