@@ -1,15 +1,15 @@
 local status, saga = pcall(require, "lspsaga")
 if not status then
-	return
+  return
 end
 
 saga.init_lsp_saga({
-	server_filetype_map = {
-		typescript = "typescript",
-	},
-	code_action_lightbulb = {
-		enable = false,
-	},
+  server_filetype_map = {
+    typescript = "typescript",
+  },
+  code_action_lightbulb = {
+    enable = false,
+  },
 })
 
 local opts = { noremap = true, silent = true }
@@ -25,5 +25,5 @@ vim.keymap.set("n", "<leader>rn", "<Cmd>Lspsaga rename<CR>", opts)
 
 vim.keymap.set("n", "<leader>ca", "<Cmd>Lspsaga code_action<CR>", { silent = true })
 vim.keymap.set("v", "<leader>ca", function()
-	vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-U>", true, false, true))("<Cmd>Lspsaga range_code_action<CR>")
+  vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-U>", true, false, true))("<Cmd>Lspsaga range_code_action<CR>")
 end, opts)
