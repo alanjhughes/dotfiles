@@ -1,5 +1,8 @@
 vim.cmd("autocmd!")
 
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.opt.clipboard:append({ "unnamedplus" })
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
@@ -35,11 +38,11 @@ vim.g.maplocalleader = " "
 
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-	group = highlight_group,
-	pattern = "*",
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = "*",
 })
 
 vim.g.rustfmt_autosave = 1
