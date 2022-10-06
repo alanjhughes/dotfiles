@@ -78,9 +78,6 @@ nvim_tree.setup({
       error = icons.diagnostics.Error,
     },
   },
-  filters = {
-    dotfiles = true,
-  },
   update_focused_file = {
     enable = true,
     update_cwd = true,
@@ -88,7 +85,7 @@ nvim_tree.setup({
   },
   git = {
     enable = true,
-    ignore = true,
+    ignore = false,
     timeout = 500,
   },
   actions = {
