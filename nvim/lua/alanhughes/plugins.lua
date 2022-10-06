@@ -69,8 +69,6 @@ packer.startup(function(use)
   use("jose-elias-alvarez/typescript.nvim")
   use("lukas-reineke/indent-blankline.nvim")
 
-  use("antoinemadec/FixCursorHold.nvim")
-
   use("nvim-lua/lsp_extensions.nvim")
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-nvim-lua")
