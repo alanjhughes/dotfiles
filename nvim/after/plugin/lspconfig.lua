@@ -15,6 +15,7 @@ local servers = {
   "rust_analyzer",
   "tsserver",
   "jsonls",
+  "solargraph",
   "html",
   "sumneko_lua",
 }

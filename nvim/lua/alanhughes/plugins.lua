@@ -27,6 +27,8 @@ packer.startup(function(use)
   use("nvim-lua/plenary.nvim")
   use("mfussenegger/nvim-dap")
 
+  use("lewis6991/gitsigns.nvim")
+
   use("rust-lang/rust.vim")
   use("simrat39/rust-tools.nvim")
   use("Saecki/crates.nvim")
@@ -49,19 +51,20 @@ packer.startup(function(use)
   use("ryanoasis/vim-devicons")
   use("folke/trouble.nvim")
   use("folke/which-key.nvim")
-  use("nvim-lua/popup.nvim")
   use("b0o/schemastore.nvim")
 
   use("yuezk/vim-js")
   use("HerringtonDarkholme/yats.vim")
   use("maxMEllon/vim-jsx-pretty")
 
-  use("airblade/vim-gitgutter")
-  use("vim-airline/vim-airline")
-
   use("p00f/nvim-ts-rainbow")
   use("bluz71/vim-nightfly-guicolors")
   use("akinsho/bufferline.nvim")
+
+  use({
+    "nvim-lualine/lualine.nvim",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true },
+  })
 
   use("windwp/nvim-autopairs")
   use("windwp/nvim-ts-autotag")
@@ -76,6 +79,7 @@ packer.startup(function(use)
   use("hrsh7th/cmp-path")
   use("hrsh7th/cmp-cmdline")
   use("hrsh7th/nvim-cmp")
+  use("onsails/lspkind-nvim")
 
   use("saadparwaiz1/cmp_luasnip")
   use("L3MON4D3/LuaSnip")
@@ -91,8 +95,6 @@ packer.startup(function(use)
 
   use({ "mg979/vim-visual-multi", branch = "master" })
 
-  use("onsails/lspkind-nvim")
-
   use("norcalli/nvim-colorizer.lua")
   use({
     "nvim-treesitter/nvim-treesitter",
@@ -105,7 +107,6 @@ packer.startup(function(use)
     run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
   })
 
-  use("lewis6991/gitsigns.nvim")
   if packer_bootstrap then
     require("packer").sync()
   end

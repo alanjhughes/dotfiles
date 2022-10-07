@@ -1,6 +1,6 @@
 local status, mason = pcall(require, "mason")
 if not status then
-	return
+  return
 end
 
 mason.setup()
