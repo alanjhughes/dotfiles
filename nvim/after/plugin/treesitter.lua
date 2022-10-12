@@ -10,6 +10,7 @@ configs.setup({
     "rust",
     "json",
     "css",
+    "tsx",
     "html",
     "bash",
     "lua",
@@ -23,7 +24,7 @@ configs.setup({
   },
   rainbow = {
     enable = true,
-    extended_mode = true,
+    extended_mode = false,
   },
   highlight = {
     enable = true,

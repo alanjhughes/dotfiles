@@ -53,10 +53,6 @@ packer.startup(function(use)
   use("folke/which-key.nvim")
   use("b0o/schemastore.nvim")
 
-  use("yuezk/vim-js")
-  use("HerringtonDarkholme/yats.vim")
-  use("maxMEllon/vim-jsx-pretty")
-
   use("p00f/nvim-ts-rainbow")
   use("bluz71/vim-nightfly-guicolors")
   use("akinsho/bufferline.nvim")
