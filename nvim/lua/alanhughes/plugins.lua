@@ -87,7 +87,17 @@ packer.startup(function(use)
     "neovim/nvim-lspconfig",
   })
 
-  use("glepnir/lspsaga.nvim")
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function()
+      require("lspsaga").setup({
+        lightbulb = {
+          enable = false,
+        },
+      })
+    end,
+  })
 
   use({ "mg979/vim-visual-multi", branch = "master" })
 
