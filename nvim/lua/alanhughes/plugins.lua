@@ -57,6 +57,8 @@ packer.startup(function(use)
   use("bluz71/vim-nightfly-guicolors")
   use("akinsho/bufferline.nvim")
 
+  use("github/copilot.vim")
+
   use({
     "nvim-lualine/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
