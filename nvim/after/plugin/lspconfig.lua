@@ -17,7 +17,7 @@ local servers = {
   "jsonls",
   "solargraph",
   "html",
-  "sumneko_lua",
+  "lua_ls",
 }
 
 masonConfig.setup({

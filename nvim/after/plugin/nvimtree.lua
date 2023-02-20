@@ -13,11 +13,11 @@ local icons = require("user.icons")
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
-  ignore_ft_on_setup = {
-    "startify",
-    "dashboard",
-    "alpha",
-  },
+  -- ignore_ft_on_setup = {
+  --   "startify",
+  --   "dashboard",
+  --   "alpha",
+  -- },
   update_cwd = true,
   renderer = {
     add_trailing = false,
