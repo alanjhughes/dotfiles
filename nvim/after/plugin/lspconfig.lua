@@ -3,6 +3,11 @@ if not status_ok then
   return
 end
 
+local masonStatus, mason = pcall(require, "mason")
+if not masonStatus then
+  return
+end
+
 local lsp_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lsp_status_ok then
   return
@@ -20,6 +25,7 @@ local servers = {
   "lua_ls",
 }
 
+mason.setup()
 masonConfig.setup({
   ensure_installed = servers,
   automatic_installation = true,
