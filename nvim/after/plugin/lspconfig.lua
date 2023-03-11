@@ -21,6 +21,7 @@ local servers = {
   "tsserver",
   "jsonls",
   "solargraph",
+  "lua_ls",
   "html",
   "lua_ls",
 }
@@ -49,6 +50,12 @@ for _, server in pairs(servers) do
 
   if server == "tsserver" then
     require("user.ts").setup(handlers)
+    goto continue
+  end
+
+  if server == "lua_ls" then
+    local settings = require("lsp.lua_ls")
+    lspconfig.lua_ls.setup(settings)
     goto continue
   end
 
