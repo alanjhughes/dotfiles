@@ -40,6 +40,8 @@ gitsigns.setup({
     end)
     map("n", "<leader>hr", ":Gitsigns reset_hunk<CR>")
     map("v", "<leader>hr", ":Gitsigns reset_hunk<CR>")
+    map("n", "<leader>hn", ":Gitsigns next_hunk<CR>")
+    map("v", "<leader>hn", ":Gitsigns next_hunk<CR>")
     map("n", "<leader>td", gs.toggle_deleted)
     map("n", "<leader>hR", "<cmd>Gitsigns reset_buffer<CR>")
     map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
