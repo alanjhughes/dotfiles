@@ -46,7 +46,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.g.rustfmt_autosave = 1
-vim.g.vim_jsx_pretty_highlight_close_tag = 1
 vim.g.airline_powerline_fonts = 1
 
 vim.opt.titlestring = [[%f %h%m%r%w %{v:progname}]]
