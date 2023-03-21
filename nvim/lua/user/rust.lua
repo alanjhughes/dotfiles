@@ -16,7 +16,7 @@ M.setup = function(handlers)
       capabilities = handlers.capabilities,
       settings = {
         ["rust-analyzer"] = {
-          checkOnSave = {
+          check = {
             command = "clippy",
           },
         },
