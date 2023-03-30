@@ -42,11 +42,6 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
   end
 
-  if server == "rust_analyzer" then
-    require("user.rust").setup(handlers)
-    goto continue
-  end
-
   if server == "tsserver" then
     require("user.ts").setup(handlers)
     goto continue
@@ -55,6 +50,11 @@ for _, server in pairs(servers) do
   if server == "lua_ls" then
     local settings = require("lsp.lua_ls")
     lspconfig.lua_ls.setup(settings)
+    goto continue
+  end
+
+  if server == "rust_analyzer" then
+    require("user.rust").setup(handlers)
     goto continue
   end
 

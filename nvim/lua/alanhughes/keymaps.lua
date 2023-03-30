@@ -60,3 +60,8 @@ keymap("n", "<leader>cb", "<cmd>Cbuild<CR>", opts)
 keymap("n", "<leader>oi", "<cmd>TypescriptOrganizeImports<CR>", opts)
 keymap("n", "<leader>ai", "<cmd>TypescriptAddMissingImports<CR>", opts)
 keymap("n", "<leader>ru", "<cmd>TypescriptRemoveUnused<CR>", opts)
+
+-- Terminal
+keymap("t", "<Esc>", "<C-\\><C-N>", opts)
+keymap("n", "<leader>kt", "<cmd>bdelete!<CR>", opts)
+keymap("n", "ot", "<cmd>terminal<CR>", opts)
