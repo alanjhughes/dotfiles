@@ -64,4 +64,4 @@ keymap("n", "<leader>ru", "<cmd>TypescriptRemoveUnused<CR>", opts)
 -- Terminal
 keymap("t", "<Esc>", "<C-\\><C-N>", opts)
 keymap("n", "<leader>kt", "<cmd>bdelete!<CR>", opts)
-keymap("n", "ot", "<cmd>terminal<CR>", opts)
+keymap("n", "<leader>ot", "<cmd>terminal<CR>", opts)
