@@ -13,17 +13,8 @@ local icons = require("user.icons")
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
-  -- ignore_ft_on_setup = {
-  --   "startify",
-  --   "dashboard",
-  --   "alpha",
-  -- },
   update_cwd = true,
   renderer = {
-    add_trailing = false,
-    group_empty = false,
-    highlight_git = false,
-    highlight_opened_files = "none",
     root_folder_modifier = ":t",
     indent_markers = {
       enable = false,
