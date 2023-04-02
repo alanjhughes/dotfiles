@@ -19,6 +19,9 @@ M.setup = function(handlers)
           check = {
             command = "clippy",
           },
+          procMacro = {
+            enable = true,
+          },
         },
       },
     },
