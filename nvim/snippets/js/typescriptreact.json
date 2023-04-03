@@ -9,7 +9,7 @@
     "prefix": "rnscr",
     "body": [
       "import { View, Text, StyleSheet } from 'react-native';",
-      "import { Screen } from '../../components/screen/screen';",
+      "import { Screen } from 'components/screen/screen';",
       "",
       "interface ${1}Props {\n}\n",
       "export function $1({}: ${1}Props) {",
