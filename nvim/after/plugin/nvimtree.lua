@@ -10,9 +10,20 @@ end
 
 local icons = require("user.icons")
 
-local tree_cb = nvim_tree_config.nvim_tree_callback
+local function on_attach(bufnr)
+  local api = require("nvim-tree.api")
+  api.config.mappings.default_on_attach(bufnr)
+
+  local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  vim.keymap.set("n", "v", api.node.open.vertical, opts("Open VSplit"))
+  vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Close Directory"))
+end
 
 nvim_tree.setup({
+  on_attach = on_attach,
   update_cwd = true,
   renderer = {
     root_folder_modifier = ":t",
@@ -88,14 +99,6 @@ nvim_tree.setup({
     width = 30,
     hide_root_folder = false,
     side = "left",
-    mappings = {
-      custom_only = false,
-      list = {
-        { key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
-        { key = "h", cb = tree_cb("close_node") },
-        { key = "v", cb = tree_cb("vsplit") },
-      },
-    },
     number = false,
     relativenumber = false,
   },
