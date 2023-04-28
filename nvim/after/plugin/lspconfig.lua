@@ -19,6 +19,7 @@ handlers.setup()
 local servers = {
   "rust_analyzer",
   "tsserver",
+  "tailwindcss",
   "jsonls",
   "lua_ls",
   "html",
