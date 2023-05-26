@@ -21,6 +21,7 @@ local servers = {
   "tsserver",
   "tailwindcss",
   "jsonls",
+  "cssls",
   "lua_ls",
   "html",
   "lua_ls",
