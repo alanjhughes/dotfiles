@@ -22,13 +22,8 @@ configs.setup({
   autotag = {
     enable = true,
   },
-  rainbow = {
-    enable = true,
-    extended_mode = false,
-  },
   highlight = {
     enable = true,
-    use_languagetree = true,
   },
   indent = { enable = true },
   context_commentstring = {
