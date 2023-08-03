@@ -9,7 +9,6 @@ dressing.setup({
     default_prompt = "Input:",
     prompt_align = "left",
     insert_only = true,
-    anchor = "SW",
     border = "rounded",
     relative = "cursor",
     prefer_width = 40,
@@ -18,8 +17,7 @@ dressing.setup({
     min_width = { 20, 0.2 },
 
     override = function(conf)
-      -- This is the config that will be passed to nvim_open_win.
-      -- Change values here to customize the layout
+      conf.anchor = "SW"
       return conf
     end,
 
@@ -54,7 +52,6 @@ dressing.setup({
       min_height = 10,
     },
     builtin = {
-      anchor = "NW",
       border = "rounded",
       relative = "editor",
       win_options = {
@@ -69,6 +66,7 @@ dressing.setup({
       min_height = { 10, 0.2 },
 
       override = function(conf)
+        conf.anchor = "NW"
         return conf
       end,
     },
