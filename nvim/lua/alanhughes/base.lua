@@ -1,6 +1,6 @@
 vim.cmd("autocmd!")
 
-vim.g.loaded = 1
+vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.opt.clipboard:append({ "unnamedplus" })
