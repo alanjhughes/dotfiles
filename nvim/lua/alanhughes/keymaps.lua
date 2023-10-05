@@ -51,6 +51,7 @@ keymap("n", "<leader>rt", "<cmd>RustEnableInlayHints<CR>", opts)
 keymap("n", "<leader>rd", "<cmd>RustDisableInlayHints<CR>", opts)
 keymap("n", "<leader>rf", "<cmd>RustFmt<CR>", opts)
 keymap("n", "<leader>re", "<cmd>RustExpandMacro<CR>", opts)
+keymap("n", "<leader>rr", "<cmd>RustRun<CR>", opts)
 
 -- Cargo
 keymap("n", "<leader>cr", "<cmd>Crun<CR>", opts)

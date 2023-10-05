@@ -72,7 +72,6 @@ packer.startup(function(use)
   use("windwp/nvim-ts-autotag")
 
   use("jose-elias-alvarez/typescript.nvim")
-  use("lukas-reineke/indent-blankline.nvim")
 
   use("nvim-lua/lsp_extensions.nvim")
   use("hrsh7th/cmp-nvim-lsp")
