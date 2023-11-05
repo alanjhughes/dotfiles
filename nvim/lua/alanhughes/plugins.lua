@@ -26,8 +26,6 @@ packer.startup(function(use)
 
   use("nvim-lua/plenary.nvim")
   use("mfussenegger/nvim-dap")
-  use("mfussenegger/nvim-lint")
-  use("mhartington/formatter.nvim")
 
   use("lewis6991/gitsigns.nvim")
 
@@ -42,6 +40,7 @@ packer.startup(function(use)
   use("tpope/vim-surround")
 
   use("JoosepAlviste/nvim-ts-context-commentstring")
+  use("nvimtools/none-ls.nvim")
 
   use("rcarriga/nvim-notify")
   use("stevearc/dressing.nvim")
@@ -94,8 +93,8 @@ packer.startup(function(use)
   })
 
   use({
-    "glepnir/lspsaga.nvim",
-    branch = "main",
+    "nvimdev/lspsaga.nvim",
+    after = "nvim-lspconfig",
     config = function()
       require("lspsaga").setup({
         lightbulb = {
