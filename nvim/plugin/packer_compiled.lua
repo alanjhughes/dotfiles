@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/alanhughes/.local/share/nvim/site/pack/packer/start/dressing.nvim",
     url = "https://github.com/stevearc/dressing.nvim"
   },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/Users/alanhughes/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/alanhughes/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -170,11 +175,6 @@ _G.packer_plugins = {
     path = "/Users/alanhughes/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/Users/alanhughes/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/alanhughes/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -194,6 +194,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/alanhughes/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-lint"] = {
+    loaded = true,
+    path = "/Users/alanhughes/.local/share/nvim/site/pack/packer/start/nvim-lint",
+    url = "https://github.com/mfussenegger/nvim-lint"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

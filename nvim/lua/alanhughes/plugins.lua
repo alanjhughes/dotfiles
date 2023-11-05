@@ -26,6 +26,8 @@ packer.startup(function(use)
 
   use("nvim-lua/plenary.nvim")
   use("mfussenegger/nvim-dap")
+  use("mfussenegger/nvim-lint")
+  use("mhartington/formatter.nvim")
 
   use("lewis6991/gitsigns.nvim")
 
@@ -41,7 +43,6 @@ packer.startup(function(use)
 
   use("JoosepAlviste/nvim-ts-context-commentstring")
 
-  use("jose-elias-alvarez/null-ls.nvim")
   use("rcarriga/nvim-notify")
   use("stevearc/dressing.nvim")
 

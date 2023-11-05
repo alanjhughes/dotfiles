@@ -13,3 +13,10 @@ vim.cmd([[
     autocmd BufNewfile,BufRead Podfile,*.podspec set ft=ruby
   augroup end
 ]])
+
+vim.cmd([[
+augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost * FormatWrite
+augroup END
+]])
