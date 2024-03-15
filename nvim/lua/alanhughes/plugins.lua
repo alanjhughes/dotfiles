@@ -53,7 +53,6 @@ packer.startup(function(use)
     },
   })
 
-  use("ryanoasis/vim-devicons")
   use("folke/trouble.nvim")
   use("folke/which-key.nvim")
   use("b0o/schemastore.nvim")

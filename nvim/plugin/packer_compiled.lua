@@ -292,11 +292,6 @@ _G.packer_plugins = {
     path = "/Users/alanhughes/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
-  ["vim-devicons"] = {
-    loaded = true,
-    path = "/Users/alanhughes/.local/share/nvim/site/pack/packer/start/vim-devicons",
-    url = "https://github.com/ryanoasis/vim-devicons"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/alanhughes/.local/share/nvim/site/pack/packer/start/vim-fugitive",
