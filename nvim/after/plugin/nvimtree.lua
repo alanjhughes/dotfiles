@@ -45,8 +45,8 @@ nvim_tree.setup({
         default = "",
         symlink = "",
         folder = {
-          arrow_open = icons.ui.ArrowOpen,
-          arrow_closed = icons.ui.ArrowClosed,
+          arrow_open = icons.ui.ChevronShortDown,
+          arrow_closed = icons.ui.ChevronShortRight,
           default = "",
           open = "",
           empty = "",
