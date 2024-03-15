@@ -25,6 +25,8 @@ vim.opt.mouse = "a"
 vim.opt.relativenumber = true
 vim.opt.title = true
 vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
+vim.opt.inccommand = "split"
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
@@ -36,14 +38,15 @@ vim.wo.number = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.g.nightflyTransparent = true
+vim.g.have_nerd_font = false
 
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking(copying) text",
   callback = function()
     vim.highlight.on_yank()
   end,
   group = highlight_group,
-  pattern = "*",
 })
 
 vim.g.rustfmt_autosave = 1

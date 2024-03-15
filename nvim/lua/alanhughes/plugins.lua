@@ -40,7 +40,7 @@ packer.startup(function(use)
   use("tpope/vim-surround")
 
   use("JoosepAlviste/nvim-ts-context-commentstring")
-  use("nvimtools/none-ls.nvim")
+  use({ "nvimtools/none-ls.nvim", requires = { "nvimtools/none-ls-extras.nvim", opt = false } })
 
   use("rcarriga/nvim-notify")
   use("stevearc/dressing.nvim")
@@ -89,6 +89,7 @@ packer.startup(function(use)
   use({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
     "neovim/nvim-lspconfig",
   })
 

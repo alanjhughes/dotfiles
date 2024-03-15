@@ -15,7 +15,6 @@ configs.setup({
     "bash",
     "lua",
     "vim",
-    "ruby",
     "prisma",
     "cpp",
   },
