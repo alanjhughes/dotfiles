@@ -17,6 +17,9 @@ configs.setup({
     "vim",
     "prisma",
     "cpp",
+    "ruby",
+    "groovy",
+    "xml",
   },
   autotag = {
     enable = true,

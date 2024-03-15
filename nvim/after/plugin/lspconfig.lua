@@ -25,7 +25,7 @@ local servers = {
   "lua_ls",
   "html",
   "lua_ls",
-  "solargraph",
+  "groovyls",
 }
 
 mason.setup()
