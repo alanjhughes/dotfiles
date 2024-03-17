@@ -25,7 +25,6 @@ local servers = {
   "lua_ls",
   "html",
   "lua_ls",
-  "groovyls",
 }
 
 mason.setup()

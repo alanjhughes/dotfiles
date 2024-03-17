@@ -20,6 +20,7 @@ configs.setup({
     "ruby",
     "groovy",
     "xml",
+    "vimdoc",
   },
   autotag = {
     enable = true,
