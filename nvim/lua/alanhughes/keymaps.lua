@@ -9,6 +9,9 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<C-q>", "<C-w>o", opts)
 
+keymap("n", "<leader>vs", "<C-w>v", opts)
+keymap("n", "<leader>hs", "<C-w>s", opts)
+
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 keymap("i", "jk", "<ESC>", opts)
