@@ -19,8 +19,8 @@ local on_attach = function(client, bufnr)
       callback = function()
         vim.lsp.buf.format({
           bufnr = bufnr,
-          filter = function(client)
-            return client.name == "null-ls"
+          filter = function(c)
+            return c.name == "null-ls"
           end,
         })
       end,
@@ -40,8 +40,8 @@ null_ls.setup({
         ),
       },
     }),
-    require("none-ls.diagnostics.eslint_d"),
-    require("none-ls.code_actions.eslint_d"),
+    require("none-ls.diagnostics.eslint"),
+    require("none-ls.code_actions.eslint"),
     formatting.stylua,
     formatting.shfmt,
     code_actions.gitsigns,

@@ -1,6 +1,7 @@
 {
-    "workspace.library": [
-        "/Users/alanhughes/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/5393ac01",
-        "/Users/alanhughes/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/589c0805"
-    ]
+  "workspace.library": [
+    "/Users/alanhughes/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/5393ac01",
+    "/Users/alanhughes/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/589c0805"
+  ],
+  "diagnostics.globals": ["vim"]
 }
