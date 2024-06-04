@@ -3,4 +3,10 @@ if not status then
   return
 end
 
-autotag.setup({})
+autotag.setup({
+  opts = {
+    enable = true,
+    enable_rename = true,
+    enable_close_on_slash = true,
+  },
+})

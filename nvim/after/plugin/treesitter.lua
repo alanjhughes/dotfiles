@@ -22,9 +22,6 @@ configs.setup({
     "xml",
     "vimdoc",
   },
-  autotag = {
-    enable = true,
-  },
   highlight = {
     enable = true,
   },
