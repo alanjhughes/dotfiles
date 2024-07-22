@@ -9,7 +9,6 @@ npairs.setup({
     lua = { "string", "source" },
     javascript = { "string", "template_string" },
   },
-  disable_filetype = { "TelescopePrompt", "spectre_panel" },
 })
 
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
