@@ -102,6 +102,10 @@ packer.startup(function(use)
         },
       })
     end,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
   })
 
   use({ "mg979/vim-visual-multi", branch = "master" })

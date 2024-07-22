@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/alanhughes/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/Users/alanhughes/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/Users/alanhughes/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/Users/alanhughes/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/alanhughes/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
+local package_path_str = "/Users/alanhughes/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/Users/alanhughes/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/Users/alanhughes/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/Users/alanhughes/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/alanhughes/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -150,7 +150,7 @@ _G.packer_plugins = {
     url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lspsaga.nvim"] = {
-    config = { "\27LJ\2\nY\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\14lightbulb\1\0\0\1\0\1\venable\1\nsetup\flspsaga\frequire\0" },
+    config = { "\27LJ\2\nd\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\14lightbulb\1\0\1\14lightbulb\0\1\0\1\venable\1\nsetup\flspsaga\frequire\0" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
@@ -341,7 +341,7 @@ vim.cmd [[ packadd nvim-lspconfig ]]
 vim.cmd [[ packadd lspsaga.nvim ]]
 
 -- Config for: lspsaga.nvim
-try_loadstring("\27LJ\2\nY\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\14lightbulb\1\0\0\1\0\1\venable\1\nsetup\flspsaga\frequire\0", "config", "lspsaga.nvim")
+try_loadstring("\27LJ\2\nd\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\14lightbulb\1\0\1\14lightbulb\0\1\0\1\venable\1\nsetup\flspsaga\frequire\0", "config", "lspsaga.nvim")
 
 time([[Sequenced loading]], false)
 
