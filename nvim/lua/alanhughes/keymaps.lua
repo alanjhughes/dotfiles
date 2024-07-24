@@ -48,6 +48,7 @@ keymap("n", "cb", "<cmd>BufferLinePickClose<CR>", opts)
 keymap("n", "gb", "<cmd>BufferLinePick<CR>", opts)
 keymap("n", "cl", "<cmd>BufferLineCloseLeft<CR>", opts)
 keymap("n", "cr", "<cmd>BufferLineCloseRight<CR>", opts)
+keymap("n", "bd", "<cmd>bdelete<CR>", opts)
 
 -- Rust
 keymap("n", "<leader>rt", "<cmd>RustEnableInlayHints<CR>", opts)
