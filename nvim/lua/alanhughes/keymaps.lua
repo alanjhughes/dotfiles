@@ -35,11 +35,10 @@ keymap("n", "<leader>fr", "<cmd>Telescope registers<CR>", opts)
 keymap("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>", opts)
 
 -- trouble
-keymap("n", "<leader>xx", "<cmd>TroubleToggle<CR>", opts)
-keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<CR>", opts)
-keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<CR>", opts)
-keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<CR>", opts)
-keymap("n", "gR", "<cmd>TroubleToggle lsp_references<CR>", opts)
+keymap("n", "<leader>xx", "<cmd>Trouble<CR>", opts)
+keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<CR>", opts)
+keymap("n", "<leader>xd", "<cmd>Trouble document_diagnostics<CR>", opts)
+keymap("n", "<leader>xl", "<cmd>Trouble loclist<CR>", opts)
 
 -- Bufferline
 keymap("n", "[b", "<cmd>BufferLineCyclePrev<CR>", opts)
