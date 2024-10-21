@@ -30,7 +30,6 @@ packer.startup(function(use)
   use("lewis6991/gitsigns.nvim")
 
   use("rust-lang/rust.vim")
-  use("simrat39/rust-tools.nvim")
   use("Saecki/crates.nvim")
 
   use("tpope/vim-fugitive")
@@ -102,10 +101,6 @@ packer.startup(function(use)
         },
       })
     end,
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    },
   })
 
   use({ "mg979/vim-visual-multi", branch = "master" })

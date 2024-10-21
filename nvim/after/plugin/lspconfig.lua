@@ -55,11 +55,6 @@ for _, server in pairs(servers) do
     goto continue
   end
 
-  if server == "rust_analyzer" then
-    require("user.rust").setup(handlers)
-    goto continue
-  end
-
   lspconfig[server].setup(opts)
   ::continue::
 end
