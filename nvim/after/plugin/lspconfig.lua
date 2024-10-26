@@ -25,6 +25,7 @@ local servers = {
   "lua_ls",
   "html",
   "lua_ls",
+  "zls",
 }
 
 mason.setup()
@@ -42,11 +43,6 @@ for _, server in pairs(servers) do
   local has_custom_opts, server_custom_opts = pcall(require, "lsp." .. server)
   if has_custom_opts then
     opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
-  end
-
-  if server == "tsserver" then
-    require("user.ts").setup(handlers)
-    goto continue
   end
 
   if server == "lua_ls" then

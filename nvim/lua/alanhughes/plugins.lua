@@ -69,8 +69,6 @@ packer.startup(function(use)
   use("windwp/nvim-autopairs")
   use("windwp/nvim-ts-autotag")
 
-  use("jose-elias-alvarez/typescript.nvim")
-
   use("nvim-lua/lsp_extensions.nvim")
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-nvim-lua")

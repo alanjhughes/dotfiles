@@ -6,6 +6,7 @@ vim.keymap.set("n", "gf", "<Cmd>Lspsaga lsp_finder<CR>", opts)
 vim.keymap.set("n", "<leader>cd", "<Cmd>Lspsaga show_cursor_diagnostics<CR>", opts)
 vim.keymap.set("n", "gp", "<Cmd>Lspsaga peek_definition<CR>", opts)
 vim.keymap.set("n", "<leader>rn", "<Cmd>Lspsaga rename<CR>", opts)
+vim.keymap.set({ "n", "t" }, "<leader>t", "<cmd>Lspsaga term_toggle<CR>", opts)
 
 vim.keymap.set("n", "<leader>ca", "<Cmd>Lspsaga code_action<CR>", { silent = true })
 vim.keymap.set("v", "<leader>ca", function()
