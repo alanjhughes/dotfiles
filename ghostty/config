@@ -5,4 +5,5 @@ macos-option-as-alt = true
 auto-update = download
 font-thicken = true
 font-size = 14
-theme = Monokai Remastered
+theme = Adventure 
+confirm-close-surface = false
