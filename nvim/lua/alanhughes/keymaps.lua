@@ -16,7 +16,6 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 keymap("i", "jk", "<ESC>", opts)
 keymap("n", "<leader>s", "<cmd>w<CR>", opts)
-keymap("n", "<C-d>", "<cmd>bd<CR>", opts)
 keymap("n", "<C-a>", "gg<S-v>G", opts)
 
 -- nvim-tree
@@ -47,6 +46,7 @@ keymap("n", "cb", "<cmd>BufferLinePickClose<CR>", opts)
 keymap("n", "gb", "<cmd>BufferLinePick<CR>", opts)
 keymap("n", "cl", "<cmd>BufferLineCloseLeft<CR>", opts)
 keymap("n", "cr", "<cmd>BufferLineCloseRight<CR>", opts)
+keymap("n", "co", "<cmd>BufferLineCloseOthers<CR>", opts)
 keymap("n", "bd", "<cmd>bdelete<CR>", opts)
 
 -- Rust
