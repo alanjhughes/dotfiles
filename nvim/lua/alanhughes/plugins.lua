@@ -109,10 +109,10 @@ packer.startup(function(use)
     run = ":TSUpdate",
   })
 
-  use("nvim-telescope/telescope.nvim")
+  use({ "nvim-telescope/telescope.nvim", tag = "0.1.8", requires = { { "nvim-lua/plenary.nvim" } } })
   use({
     "nvim-telescope/telescope-fzf-native.nvim",
-    run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+    run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
   })
 
   use("ryanoasis/vim-devicons")
