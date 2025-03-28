@@ -1,97 +1,126 @@
-local fn = vim.fn
-
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  })
-  vim.cmd([[packadd packer.nvim]])
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
 end
+vim.opt.rtp:prepend(lazypath)
 
-local status, packer = pcall(require, "packer")
-if not status then
-  print("Packer is not installed")
-  return
-end
+require("lazy").setup({
+  "nvim-lua/plenary.nvim",
+  "mfussenegger/nvim-dap",
 
-vim.cmd([[packadd packer.nvim]])
+  "lewis6991/gitsigns.nvim",
 
-packer.startup(function(use)
-  use("wbthomason/packer.nvim")
+  "rust-lang/rust.vim",
+  "Saecki/crates.nvim",
 
-  use("nvim-lua/plenary.nvim")
-  use("mfussenegger/nvim-dap")
+  "tpope/vim-fugitive",
+  "tpope/vim-rhubarb",
+  "tpope/vim-sleuth",
+  "tpope/vim-commentary",
+  "tpope/vim-surround",
 
-  use("lewis6991/gitsigns.nvim")
-
-  use("rust-lang/rust.vim")
-  use("Saecki/crates.nvim")
-
-  use("tpope/vim-fugitive")
-  use("tpope/vim-rhubarb")
-  use("tpope/vim-sleuth")
-  use("tpope/vim-commentary")
-  use("tpope/vim-surround")
-
-  use("JoosepAlviste/nvim-ts-context-commentstring")
-  use({ "nvimtools/none-ls.nvim", requires = { "nvimtools/none-ls-extras.nvim", opt = false } })
-
-  use("rcarriga/nvim-notify")
-  use("stevearc/dressing.nvim")
-
-  use("nvim-tree/nvim-web-devicons")
-  use({
-    "nvim-tree/nvim-tree.lua",
-    requires = {
-      "nvim-tree/nvim-web-devicons",
+  { -- Autoformat
+    "stevearc/conform.nvim",
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
+    keys = {
+      {
+        "<leader>f",
+        function()
+          require("conform").format({ async = true, lsp_format = "fallback" })
+        end,
+        mode = "",
+        desc = "[F]ormat buffer",
+      },
     },
-  })
+    opts = {
+      notify_on_error = false,
+      format_on_save = function(bufnr)
+        -- Disable "format_on_save lsp_fallback" for languages that don't
+        -- have a well standardized coding style. You can add additional
+        -- languages here or re-enable it for the disabled ones.
+        local disable_filetypes = { c = true, cpp = true }
+        if disable_filetypes[vim.bo[bufnr].filetype] then
+          return nil
+        else
+          return {
+            timeout_ms = 500,
+            lsp_format = "fallback",
+          }
+        end
+      end,
+      formatters_by_ft = {
+        lua = { "stylua" },
+        rust = { "rustfmt", lsp_format = "fallback" },
+        javascript = { "prettierd", "prettier", stop_after_first = true },
+        typescript = { "prettierd", "prettier", stop_after_first = true },
+        typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+        json = { "prettierd", "prettier", stop_after_first = true },
+      },
+    },
+  },
 
-  use("folke/trouble.nvim")
-  use("folke/which-key.nvim")
-  use("b0o/schemastore.nvim")
+  "rcarriga/nvim-notify",
 
-  use("bluz71/vim-nightfly-guicolors")
-  use("akinsho/bufferline.nvim")
+  "nvim-tree/nvim-web-devicons",
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 
-  use("github/copilot.vim")
+  "folke/trouble.nvim",
+  "folke/which-key.nvim",
+  "b0o/schemastore.nvim",
 
-  use({
+  "bluz71/vim-nightfly-guicolors",
+  "akinsho/bufferline.nvim",
+
+  "github/copilot.vim",
+
+  {
     "nvim-lualine/lualine.nvim",
-    requires = { "nvim-tree/nvim-web-devicons", opt = true },
-  })
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 
-  use("windwp/nvim-autopairs")
-  use("windwp/nvim-ts-autotag")
+  "windwp/nvim-autopairs",
+  "windwp/nvim-ts-autotag",
 
-  use("nvim-lua/lsp_extensions.nvim")
-  use("hrsh7th/cmp-nvim-lsp")
-  use("hrsh7th/cmp-nvim-lua")
-  use("hrsh7th/cmp-buffer")
-  use("hrsh7th/cmp-path")
-  use("hrsh7th/cmp-cmdline")
-  use("hrsh7th/nvim-cmp")
-  use("onsails/lspkind-nvim")
-
-  use("saadparwaiz1/cmp_luasnip")
-  use("L3MON4D3/LuaSnip")
-  use("rafamadriz/friendly-snippets")
-
-  use({
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
+  {
     "neovim/nvim-lspconfig",
-  })
+    dependencies = {
+      { "williamboman/mason.nvim", opts = {} },
+      "williamboman/mason-lspconfig.nvim",
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
+      { "j-hui/fidget.nvim", opts = {} },
+    },
+  },
 
-  use({
+  "nvim-lua/lsp_extensions.nvim",
+  "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/cmp-nvim-lua",
+  "hrsh7th/cmp-buffer",
+  "hrsh7th/cmp-path",
+  "hrsh7th/cmp-cmdline",
+  "hrsh7th/nvim-cmp",
+  "onsails/lspkind-nvim",
+
+  "saadparwaiz1/cmp_luasnip",
+  "L3MON4D3/LuaSnip",
+  "rafamadriz/friendly-snippets",
+
+  {
     "nvimdev/lspsaga.nvim",
-    after = "nvim-lspconfig",
+    dependencies = "nvim-lspconfig",
     config = function()
       require("lspsaga").setup({
         lightbulb = {
@@ -99,24 +128,43 @@ packer.startup(function(use)
         },
       })
     end,
-  })
+  },
 
-  use({ "mg979/vim-visual-multi", branch = "master" })
+  { "mg979/vim-visual-multi", branch = "master" },
 
-  use("norcalli/nvim-colorizer.lua")
-  use({
+  "norcalli/nvim-colorizer.lua",
+  {
     "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  })
+    build = ":TSUpdate",
+    main = "nvim-treesitter.configs",
+  },
 
-  use({ "nvim-telescope/telescope.nvim", tag = "0.1.8", requires = { { "nvim-lua/plenary.nvim" } } })
-  use({
-    "nvim-telescope/telescope-fzf-native.nvim",
-    run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
-  })
+  {
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.8",
+    dependencies = {
+      {
+        "nvim-lua/plenary.nvim",
+        {
+          "nvim-telescope/telescope-fzf-native.nvim",
 
-  use("ryanoasis/vim-devicons")
-  if packer_bootstrap then
-    require("packer").sync()
-  end
-end)
+          -- `build` is used to run some command when the plugin is installed/updated.
+          -- This is only run then, not every time Neovim starts up.
+          build = "make",
+
+          -- `cond` is a condition used to determine whether this plugin should be
+          -- installed and loaded.
+          cond = function()
+            return vim.fn.executable("make") == 1
+          end,
+        },
+      },
+    },
+  },
+  { "nvim-telescope/telescope-ui-select.nvim" },
+}, {
+  install = { missing = true },
+  ui = {
+    border = "rounded",
+  },
+})

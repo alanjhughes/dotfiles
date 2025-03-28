@@ -26,6 +26,7 @@ local servers = {
   "html",
   "lua_ls",
   "zls",
+  "eslint",
 }
 
 mason.setup()

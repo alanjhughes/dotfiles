@@ -1,5 +1,3 @@
-local action = require("lspsaga.codeaction")
-
 local M = {}
 
 M.setup = function()

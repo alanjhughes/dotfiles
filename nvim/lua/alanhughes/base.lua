@@ -1,5 +1,8 @@
 vim.cmd("autocmd!")
 
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -28,18 +31,18 @@ vim.opt.title = true
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 vim.opt.inccommand = "split"
-
+vim.opt.mouse = "a"
+vim.opt.showmode = false
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.inccommand = "split"
 
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
 vim.wo.signcolumn = "yes"
 vim.wo.number = true
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 vim.g.nightflyTransparent = true
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {

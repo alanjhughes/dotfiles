@@ -59,8 +59,3 @@ keymap("n", "<leader>rr", "<cmd>RustRun<CR>", opts)
 -- Cargo
 keymap("n", "<leader>cr", "<cmd>Crun<CR>", opts)
 keymap("n", "<leader>cb", "<cmd>Cbuild<CR>", opts)
-
--- Terminal
-keymap("t", "<Esc>", "<C-\\><C-N>", opts)
-keymap("n", "<leader>kt", "<cmd>bdelete!<CR>", opts)
-keymap("n", "<leader>ot", "<cmd>terminal<CR>", opts)
