@@ -64,7 +64,25 @@ require("lazy").setup({
       },
     },
   },
-
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters_by_ft = {
+        javascript = { "eslint_d" },
+        typescript = { "eslint_d" },
+        typescriptreact = { "eslint_d" },
+        json = { "jsonlint" },
+        lua = { "luacheck" },
+      },
+    },
+    config = function(_, opts)
+      vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+        callback = function()
+          require("lint").try_lint()
+        end,
+      })
+    end,
+  },
   "rcarriga/nvim-notify",
 
   {
