@@ -50,26 +50,6 @@
     "description": "Create default react Component"
   },
 
-  "Create Chakra React Component": {
-    "prefix": "cmp",
-    "body": [
-      "import { Stack, Text } from '@chakra-ui/react';",
-      "",
-      "interface ${1}Props {}",
-      "",
-      "function $1({}: ${1}Props) {",
-      "  return (",
-      "    <Stack>",
-      "      <Text>$1</Text>",
-      "    </Stack>",
-      "  );",
-      "};",
-      "",
-      "export default $1;"
-    ],
-    "description": "Create chakra default react Component"
-  },
-
   "Create Remix React Route Component": {
     "prefix": "rmxpg",
     "body": [

@@ -49,13 +49,6 @@ keymap("n", "cr", "<cmd>BufferLineCloseRight<CR>", opts)
 keymap("n", "co", "<cmd>BufferLineCloseOthers<CR>", opts)
 keymap("n", "bd", "<cmd>bdelete<CR>", opts)
 
--- Rust
-keymap("n", "<leader>rt", "<cmd>RustEnableInlayHints<CR>", opts)
-keymap("n", "<leader>rd", "<cmd>RustDisableInlayHints<CR>", opts)
-keymap("n", "<leader>rf", "<cmd>RustFmt<CR>", opts)
-keymap("n", "<leader>re", "<cmd>RustExpandMacro<CR>", opts)
-keymap("n", "<leader>rr", "<cmd>RustRun<CR>", opts)
-
 -- Cargo
 keymap("n", "<leader>cr", "<cmd>Crun<CR>", opts)
 keymap("n", "<leader>cb", "<cmd>Cbuild<CR>", opts)

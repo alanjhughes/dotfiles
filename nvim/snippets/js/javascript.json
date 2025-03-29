@@ -4,24 +4,6 @@
     "body": ["console.log(${0});"],
     "description": "Log output to console"
   },
-  "Create Chakra React Component": {
-    "prefix": "comp",
-    "body": [
-      "import { Stack, Text } from '@chakra-ui/react';",
-      "import PropTypes from 'prop-types';",
-      "",
-      "function $functionName($props) {",
-      "  return (",
-      "    <Stack>",
-      "      <Text>$functionName</Text>",
-      "    </Stack>",
-      "  );",
-      "};",
-      "",
-      "export default $functionName;"
-    ],
-    "description": "Create default react Component"
-  },
 
   "Standard React Component": {
     "prefix": "cmp",

@@ -19,8 +19,6 @@ require("lazy").setup({
   "mfussenegger/nvim-dap",
 
   "lewis6991/gitsigns.nvim",
-
-  "rust-lang/rust.vim",
   "Saecki/crates.nvim",
 
   "tpope/vim-fugitive",
@@ -29,7 +27,7 @@ require("lazy").setup({
   "tpope/vim-commentary",
   "tpope/vim-surround",
 
-  { -- Autoformat
+  {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
     cmd = { "ConformInfo" },
@@ -46,9 +44,6 @@ require("lazy").setup({
     opts = {
       notify_on_error = false,
       format_on_save = function(bufnr)
-        -- Disable "format_on_save lsp_fallback" for languages that don't
-        -- have a well standardized coding style. You can add additional
-        -- languages here or re-enable it for the disabled ones.
         local disable_filetypes = { c = true, cpp = true }
         if disable_filetypes[vim.bo[bufnr].filetype] then
           return nil
@@ -72,7 +67,6 @@ require("lazy").setup({
 
   "rcarriga/nvim-notify",
 
-  "nvim-tree/nvim-web-devicons",
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -81,10 +75,8 @@ require("lazy").setup({
   "folke/trouble.nvim",
   "folke/which-key.nvim",
   "b0o/schemastore.nvim",
-
   "bluz71/vim-nightfly-guicolors",
   "akinsho/bufferline.nvim",
-
   "github/copilot.vim",
 
   {
@@ -92,7 +84,8 @@ require("lazy").setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
 
-  "windwp/nvim-autopairs",
+  { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
+
   "windwp/nvim-ts-autotag",
 
   {
@@ -147,13 +140,7 @@ require("lazy").setup({
         "nvim-lua/plenary.nvim",
         {
           "nvim-telescope/telescope-fzf-native.nvim",
-
-          -- `build` is used to run some command when the plugin is installed/updated.
-          -- This is only run then, not every time Neovim starts up.
           build = "make",
-
-          -- `cond` is a condition used to determine whether this plugin should be
-          -- installed and loaded.
           cond = function()
             return vim.fn.executable("make") == 1
           end,
