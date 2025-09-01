@@ -7,4 +7,3 @@ font-thicken = true
 font-size = 14
 theme = Adventure 
 confirm-close-surface = false
-keybind = shift+enter=text:\n
