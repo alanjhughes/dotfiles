@@ -1,0 +1,9 @@
+background-opacity = 0.9
+background = #000000
+window-colorspace = display-p3
+macos-option-as-alt = left
+auto-update = download
+font-thicken = true
+font-size = 14
+theme = Adventure 
+confirm-close-surface = false
