@@ -15,7 +15,6 @@ local servers = {
   "lua_ls",
   "html",
   "zls",
-  "eslint",
 }
 
 mason_lspconfig.setup({
