@@ -32,7 +32,7 @@ trouble.setup({
 		next = "j", -- next item
 	},
 	indent_lines = true,
-	auto_jmp = { "lsp_deinitions" },
+	auto_jump = { "lsp_definitions" },
 	signs = {
 		error = "",
 		warning = "",

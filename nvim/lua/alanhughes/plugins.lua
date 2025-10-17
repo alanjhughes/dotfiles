@@ -16,8 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   "nvim-lua/plenary.nvim",
-  "mfussenegger/nvim-dap",
-
   "lewis6991/gitsigns.nvim",
   "Saecki/crates.nvim",
 
@@ -109,22 +107,33 @@ require("lazy").setup({
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      { "williamboman/mason.nvim", opts = {} },
-      "williamboman/mason-lspconfig.nvim",
-      "WhoIsSethDaniel/mason-tool-installer.nvim",
+      { "mason-org/mason.nvim", opts = {} },
+      "mason-org/mason-lspconfig.nvim",
+      {
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        opts = {
+          ensure_installed = {
+            "stylua",
+            "rustfmt",
+            "eslint_d",
+            "jsonlint",
+            "prettierd",
+            "luacheck",
+          },
+          run_on_start = true,
+          start_delay = 3000,
+        },
+      },
       { "j-hui/fidget.nvim", opts = {} },
     },
   },
 
-  "nvim-lua/lsp_extensions.nvim",
   "hrsh7th/cmp-nvim-lsp",
   "hrsh7th/cmp-nvim-lua",
   "hrsh7th/cmp-buffer",
   "hrsh7th/cmp-path",
   "hrsh7th/cmp-cmdline",
   "hrsh7th/nvim-cmp",
-  "onsails/lspkind-nvim",
-
   "saadparwaiz1/cmp_luasnip",
   "L3MON4D3/LuaSnip",
   "rafamadriz/friendly-snippets",
@@ -143,7 +152,17 @@ require("lazy").setup({
 
   { "mg979/vim-visual-multi", branch = "master" },
 
-  "norcalli/nvim-colorizer.lua",
+  {
+    "NvChad/nvim-colorizer.lua",
+    opts = {
+      user_default_options = {
+        names = false,
+      },
+    },
+    config = function(_, opts)
+      require("colorizer").setup(opts)
+    end,
+  },
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
