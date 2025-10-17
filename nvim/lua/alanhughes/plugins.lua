@@ -70,7 +70,6 @@ require("lazy").setup({
         typescript = { "eslint_d" },
         typescriptreact = { "eslint_d" },
         json = { "jsonlint" },
-        lua = { "luacheck" },
       },
     },
     config = function(_, opts)
@@ -118,7 +117,6 @@ require("lazy").setup({
             "eslint_d",
             "jsonlint",
             "prettierd",
-            "luacheck",
           },
           run_on_start = true,
           start_delay = 3000,
