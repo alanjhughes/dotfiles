@@ -51,6 +51,34 @@ return {
       end,
     },
   },
+  {
+    "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewFileHistory" },
+    keys = {
+      {
+        "<leader>gd",
+        function()
+          local ok, lib = pcall(require, "diffview.lib")
+          if ok and next(lib.views) ~= nil then
+            vim.cmd("DiffviewClose")
+          else
+            vim.cmd("DiffviewOpen")
+          end
+        end,
+        desc = "Toggle diff view",
+      },
+      { "<leader>gh", "<cmd>DiffviewFileHistory %<cr>", desc = "File history" },
+      { "<leader>gH", "<cmd>DiffviewFileHistory<cr>", desc = "Branch history" },
+    },
+    opts = {
+      enhanced_diff_hl = true,
+      view = {
+        merge_tool = {
+          layout = "diff3_mixed",
+        },
+      },
+    },
+  },
   { "tpope/vim-fugitive" },
   { "tpope/vim-rhubarb" },
 }
