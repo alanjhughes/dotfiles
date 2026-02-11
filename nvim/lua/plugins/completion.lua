@@ -1,0 +1,92 @@
+return {
+  {
+    "saghen/blink.cmp",
+    version = "1.*",
+    event = "InsertEnter",
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+    },
+    opts = {
+      keymap = {
+        preset = "none",
+        ["<C-j>"] = { "select_next", "fallback" },
+        ["<C-k>"] = { "select_prev", "fallback" },
+        ["<C-b>"] = { "scroll_documentation_up", "fallback" },
+        ["<C-f>"] = { "scroll_documentation_down", "fallback" },
+        ["<C-Space>"] = { "show", "fallback" },
+        ["<C-e>"] = { "cancel", "fallback" },
+        ["<CR>"] = { "accept", "fallback" },
+        ["<Tab>"] = { "snippet_forward", "select_next", "fallback" },
+        ["<S-Tab>"] = { "snippet_backward", "select_prev", "fallback" },
+      },
+      appearance = {
+        nerd_font_variant = "mono",
+        kind_icons = {
+          Array = " ",
+          Boolean = " ",
+          Class = " ",
+          Color = " ",
+          Constant = " ",
+          Constructor = " ",
+          Enum = " ",
+          EnumMember = " ",
+          Event = " ",
+          Field = " ",
+          File = " ",
+          Folder = "󰉋 ",
+          Function = " ",
+          Interface = " ",
+          Key = " ",
+          Keyword = " ",
+          Method = " ",
+          Module = " ",
+          Namespace = " ",
+          Null = "󰟢 ",
+          Number = " ",
+          Object = " ",
+          Operator = " ",
+          Package = " ",
+          Property = " ",
+          Reference = " ",
+          Snippet = " ",
+          String = " ",
+          Struct = " ",
+          Text = " ",
+          TypeParameter = " ",
+          Unit = " ",
+          Value = " ",
+          Variable = " ",
+        },
+      },
+      completion = {
+        documentation = {
+          auto_show = true,
+          window = {
+            border = "rounded",
+          },
+        },
+        menu = {
+          border = "rounded",
+          draw = {
+            columns = { { "kind_icon" }, { "label", gap = 1 }, { "source_name" } },
+          },
+        },
+        ghost_text = { enabled = true },
+      },
+      snippets = {
+        preset = "default",
+        search_paths = { vim.fn.stdpath("config") .. "/snippets/js" },
+      },
+      sources = {
+        default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+        providers = {
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            score_offset = 100,
+          },
+        },
+      },
+    },
+  },
+}

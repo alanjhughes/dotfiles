@@ -1,5 +1,3 @@
-vim.cmd("autocmd!")
-
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -31,11 +29,9 @@ vim.opt.title = true
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 vim.opt.inccommand = "split"
-vim.opt.mouse = "a"
 vim.opt.showmode = false
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-vim.opt.inccommand = "split"
 
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
 vim.wo.signcolumn = "yes"
@@ -54,6 +50,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.g.rustfmt_autosave = 1
-vim.g.airline_powerline_fonts = 1
 
 vim.opt.titlestring = [[%f %h%m%r%w %{v:progname}]]
+
+-- Filetype detection
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { "Podfile", "*.podspec" },
+  callback = function()
+    vim.bo.filetype = "ruby"
+  end,
+})
