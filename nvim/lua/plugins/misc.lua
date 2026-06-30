@@ -1,5 +1,5 @@
 return {
-  { "github/copilot.vim" },
+  { "github/copilot.vim", event = "InsertEnter" },
   { "Saecki/crates.nvim", event = "BufRead Cargo.toml", opts = {} },
   { "tpope/vim-sleuth" },
 }

@@ -34,8 +34,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
-vim.wo.signcolumn = "yes"
-vim.wo.number = true
+vim.opt.signcolumn = "yes"
 
 vim.g.nightflyTransparent = true
 vim.g.have_nerd_font = true
@@ -44,12 +43,10 @@ local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = t
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking(copying) text",
   callback = function()
-    vim.highlight.on_yank()
+    vim.hl.on_yank()
   end,
   group = highlight_group,
 })
-
-vim.g.rustfmt_autosave = 1
 
 vim.opt.titlestring = [[%f %h%m%r%w %{v:progname}]]
 

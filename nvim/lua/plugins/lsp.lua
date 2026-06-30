@@ -34,7 +34,6 @@ return {
             [vim.diagnostic.severity.INFO] = vim.fn.nr2char(0xf05a),
           },
         },
-        update_in_insert = true,
         underline = true,
         severity_sort = true,
         float = {
@@ -65,19 +64,15 @@ return {
           map("n", "<leader>rn", vim.lsp.buf.rename, "Rename")
           map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, "Code action")
           map("n", "<leader>cd", vim.diagnostic.open_float, "Line diagnostics")
-          map("n", "<leader>l", vim.diagnostic.open_float, "Show diagnostics")
           map("n", "<space>q", vim.diagnostic.setloclist, "Diagnostics to loclist")
           map("n", "<space>wa", vim.lsp.buf.add_workspace_folder, "Add workspace folder")
           map("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, "Remove workspace folder")
           map("n", "<space>wl", function()
             print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
           end, "List workspace folders")
-          map("n", "<leader>p", function()
-            vim.lsp.buf.format({ async = true })
-          end, "Format buffer")
 
           -- Document highlight
-          if client and client.supports_method("textDocument/documentHighlight") then
+          if client and client:supports_method("textDocument/documentHighlight") then
             local group = vim.api.nvim_create_augroup("lsp_document_highlight_" .. buf, { clear = true })
             vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
               group = group,
@@ -93,10 +88,10 @@ return {
 
           -- Disable formatting from LSP (conform handles it)
           if client then
-            if client.supports_method("textDocument/formatting") then
+            if client:supports_method("textDocument/formatting") then
               client.server_capabilities.documentFormattingProvider = false
             end
-            if client.supports_method("textDocument/rangeFormatting") then
+            if client:supports_method("textDocument/rangeFormatting") then
               client.server_capabilities.documentRangeFormattingProvider = false
             end
           end
