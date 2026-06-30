@@ -6,20 +6,6 @@ return {
       { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle file tree" },
       { "<leader>tf", "<cmd>NvimTreeFindFile<CR>", desc = "Find file in tree" },
     },
-    config = function(_, opts)
-      -- Define diagnostic signs that nvim-tree expects
-      local signs = {
-        Error = "",
-        Warn = "",
-        Hint = "󰌶",
-        Info = "",
-      }
-      for type, icon in pairs(signs) do
-        vim.fn.sign_define("NvimTreeDiagnostic" .. type .. "Icon", { text = icon, texthl = "DiagnosticSign" .. type })
-      end
-
-      require("nvim-tree").setup(opts)
-    end,
     opts = {
       on_attach = function(bufnr)
         local api = require("nvim-tree.api")
@@ -83,9 +69,9 @@ return {
         enable = true,
         icons = {
           hint = "󰌶",
-          info = "",
-          warning = "",
-          error = "",
+          info = vim.fn.nr2char(0xf05a),
+          warning = vim.fn.nr2char(0xf071),
+          error = vim.fn.nr2char(0xf057),
         },
       },
       update_focused_file = {
