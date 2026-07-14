@@ -9,7 +9,6 @@ return {
         opts = {
           ensure_installed = {
             "stylua",
-            "rustfmt",
             "eslint_d",
             "jsonlint",
             "prettierd",
